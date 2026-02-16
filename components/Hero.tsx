@@ -19,23 +19,23 @@ export function Hero() {
             className="mt-4 font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-slate-900 tracking-tight animate-fade-in"
             style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}
           >
-            <span className="text-aru-orange text-6xl sm:text-7xl md:text-8xl lg:text-9xl">Aru</span>
-            <span className="text-aru-cyan text-6xl sm:text-7xl md:text-8xl lg:text-9xl">365</span>
+            <span className="text-aru-orange text-7xl sm:text-7xl md:text-8xl lg:text-9xl">Aru</span>
+            <span className="text-aru-cyan text-7xl sm:text-7xl md:text-8xl lg:text-9xl">365</span>
             <br />
             <span
-              className="block mt-1 text-3xl sm:text-4xl md:text-5xl font-medium tracking-wide text-slate-700"
+              className="block mt-1 text-4xl sm:text-4xl md:text-5xl font-medium tracking-wide text-slate-700"
               style={{ fontFamily: "var(--font-tagline), Georgia, serif" }}
             >
               Everything Aruba.
             </span>
             <span
-              className="block text-2xl sm:text-3xl md:text-4xl font-medium tracking-widest uppercase text-aru-cyan"
+              className="block text-3xl sm:text-3xl md:text-4xl font-medium tracking-widest uppercase text-aru-cyan"
               style={{ fontFamily: "var(--font-tagline), Georgia, serif" }}
             >
               365 Days a Year.
             </span>
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto animate-fade-in [animation-delay:0.05s] opacity-0 [animation-fill-mode:forwards]">
+          <p className="mt-6 text-xl sm:text-xl text-slate-600 max-w-2xl mx-auto animate-fade-in [animation-delay:0.05s] opacity-0 [animation-fill-mode:forwards]">
             The ultimate platform for tours and restaurants in Aruba.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in [animation-delay:0.1s] opacity-0 [animation-fill-mode:forwards]">
