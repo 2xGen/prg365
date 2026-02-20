@@ -12,6 +12,11 @@ const HIDDEN_IN_NAV = [
   "things-to-do-in-aruba-with-kids",
 ];
 
+/** Nav label: strip " in Aruba" so we show e.g. "Catamaran Cruises" not "Catamaran Cruises in Aruba". */
+function navCategoryLabel(title: string): string {
+  return title.replace(/\s+in\s+Aruba$/i, "").trim() || title;
+}
+
 export function Header() {
   const pathname = usePathname();
   const [categoriesOpen, setCategoriesOpen] = useState(false);
@@ -93,7 +98,7 @@ export function Header() {
                       onClick={() => setCategoriesOpen(false)}
                       className="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900"
                     >
-                      {p.title}
+                      {navCategoryLabel(p.title)}
                     </Link>
                   ))}
                 </div>
