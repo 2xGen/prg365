@@ -187,7 +187,7 @@ export function TourListingTemplate({
                 </svg>
               </a>
               <p className="mt-3 text-sm text-slate-500">
-                Booking via Viator. We may earn a commission at no extra cost to you.
+                Powered by Viator
               </p>
             </div>
           </div>
@@ -391,7 +391,7 @@ export function TourListingTemplate({
             </svg>
           </a>
           <p className="mt-4 text-sm text-slate-500">
-            You&apos;ll book on Viator. We are a Viator affiliate and may earn a commission at no extra cost to you.
+            Powered by Viator
           </p>
           <Link
             href={categoryHref}
