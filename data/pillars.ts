@@ -507,32 +507,91 @@ export const pillars: Pillar[] = [
     slug: "sea-glass-island-aruba",
     title: "Sea Glass Island in Aruba",
     description:
-      "Learn how to visit Sea Glass Island in Aruba, what to expect, and the best guided tours to experience this unique and colorful coastal attraction.",
+      "Discover Sea Glass Island in Aruba—how to get there by kayak or boat, the best guided tours (morning, afternoon, sunset, clear kayak), and what to expect at this unique beach covered in colorful sea glass.",
     subPages: [
       { label: "How to get to Sea Glass Island", href: "/sea-glass-island-aruba/how-to-get-there" },
       { label: "Best Sea Glass Island tours", href: "/sea-glass-island-aruba/best-tours" },
       { label: "What to expect", href: "/sea-glass-island-aruba/what-to-expect" },
     ],
     relatedSlugs: ["snorkeling-and-diving-in-aruba", "catamaran-cruises-in-aruba", "water-sports-and-rentals-in-aruba"],
+    about:
+      "Sea Glass Island is one of Aruba's most unique attractions—a small island or beach area where waves have washed ashore decades of tumbled glass, creating a colorful shoreline. You can't drive there; access is by guided kayak tour or boat. Tours typically include equipment, instruction, and time to explore and collect (or photograph) sea glass. Options range from morning and afternoon kayak trips to clear-kayak adventures and sunset snorkeling tours. Ideal for families, couples, and anyone who wants a memorable half-day experience off the main beaches.",
+    insiderTips: [
+      "Book at least a few days ahead in high season—Sea Glass Island tours are popular and group sizes are often limited.",
+      "Morning tours usually mean calmer water and cooler temperatures; sunset tours offer golden light and a memorable end to the day.",
+      "Wear water shoes or sandals you don't mind getting wet; you may wade or walk on the beach.",
+      "Bring a waterproof bag or case for your phone if you want photos; some operators offer clear kayaks for unique views.",
+    ],
+    whatToExpect: [
+      "Check-in at the operator's meeting point (often a beach or marina); you'll get a safety briefing and equipment (kayak, paddle, life jacket).",
+      "Paddle or boat to Sea Glass Island; the journey is part of the experience, with views of Aruba's coast.",
+      "Time on the island to explore the sea glass beach, take photos, and learn about how the glass gets there.",
+      "Return paddle or boat ride; total duration is typically 2–3 hours depending on the tour.",
+    ],
+    whoIsThisFor: [
+      "Families and couples looking for a unique, photogenic experience away from the main resorts.",
+      "Kayakers of all levels—many tours suit beginners with calm water and instruction.",
+      "Travelers who want to combine a short paddle with beachcombing and sightseeing.",
+      "Anyone curious about Aruba's lesser-known attractions and natural oddities.",
+    ],
+    highlights: [
+      "Paddle or boat to a beach covered in colorful tumbled sea glass",
+      "Morning, afternoon, sunset, and clear-kayak tour options",
+      "Guided experience with equipment and safety briefing",
+      "Photo opportunities and a memorable story to take home",
+    ],
     faqs: [
-      { question: "What is Sea Glass Island in Aruba?", answer: "Sea Glass Island (also known as Renaissance Island or a nearby beach) is known for sea glass washed ashore. Some tours include it as a stop." },
-      { question: "Can I visit Sea Glass Island on my own?", answer: "Access depends on the location. Some areas are reachable by boat tour only. Check current tour options and access rules." },
+      { question: "What is Sea Glass Island in Aruba?", answer: "Sea Glass Island is a small island or coastal area in Aruba where waves have deposited decades of tumbled glass—bottles, jars, and other glass—creating a colorful, unique beach. It's a popular stop on guided kayak and boat tours." },
+      { question: "How do I get to Sea Glass Island in Aruba?", answer: "You can only reach Sea Glass Island by water. Guided kayak tours and boat tours depart from designated meeting points (often near the coast or a marina) and take you to the island. You cannot drive or walk there on your own." },
+      { question: "Are Sea Glass Island tours good for beginners?", answer: "Yes. Many kayak tours to Sea Glass Island are suitable for beginners. Operators provide instruction, stable kayaks, and often choose calm routes. Clear-kayak and boat options are also available if you prefer not to paddle." },
+      { question: "What is included on a Sea Glass Island tour?", answer: "Typically: kayak or boat transport, life jacket, paddle (for kayak tours), and a guided experience with time on the island. Some tours include snorkeling, photos, or refreshments. Check each product for exact inclusions." },
+      { question: "Can I take sea glass home from Sea Glass Island?", answer: "Policies vary by operator and local rules. Some tours allow you to collect a small amount of sea glass as a souvenir; others ask you to leave it for the environment. Your guide will explain the rules on the day." },
+      { question: "When is the best time for a Sea Glass Island tour?", answer: "Morning tours often have calmer water and fewer crowds; afternoon and sunset tours offer different light and a memorable end to the day. Book in advance in peak season—tours fill quickly." },
     ],
   },
   {
     slug: "water-sports-and-rentals-in-aruba",
     title: "Water Sports and Rentals in Aruba",
     description:
-      "Discover the best water sports in Aruba, including jet ski rentals, parasailing, kayaking, paddleboarding, and other exciting ocean activities.",
+      "Book the best water sports in Aruba: jet ski rentals, parasailing, water skiing, wakeboarding, flyboarding, jetovator, and tubing. Compare options, prices, and book with free cancellation.",
     subPages: [
       { label: "Jet ski rentals", href: "/water-sports-and-rentals-in-aruba/jet-ski" },
       { label: "Parasailing", href: "/water-sports-and-rentals-in-aruba/parasailing" },
-      { label: "Kayaking and paddleboarding", href: "/water-sports-and-rentals-in-aruba/kayak-paddleboard" },
+      { label: "Water skiing, tubing & flyboarding", href: "/water-sports-and-rentals-in-aruba/water-skiing-tubing-flyboarding" },
     ],
     relatedSlugs: ["snorkeling-and-diving-in-aruba", "atv-and-jeep-tours-in-aruba", "things-to-do-in-aruba-with-kids"],
+    about:
+      "Aruba's calm waters and steady trade winds make it ideal for water sports. Jet ski rentals let you explore the coast at your own pace; parasailing gives you bird's-eye views; water skiing, wakeboarding, tubing, flyboarding, and jetovator deliver high-energy thrills. Most activities run from Palm Beach, Eagle Beach, or nearby marinas. Sessions are typically 15–30 minutes for motorized activities; parasailing flights last a similar time. Book in advance in peak season to secure your slot and often better rates.",
+    insiderTips: [
+      "Book jet skis and parasailing a few days ahead in high season—popular time slots fill quickly.",
+      "Morning sessions often have calmer water and less wind; afternoon can be breezier (good for parasailing).",
+      "Wear swimwear and bring sunscreen; you'll get wet. Leave valuables in a locker or with a friend.",
+      "Check age and weight limits when you book—parasailing and some motorized sports have minimum or maximum limits.",
+    ],
+    whatToExpect: [
+      "Check-in at the operator's beach or marina kiosk. You'll sign a waiver and get a safety briefing.",
+      "Equipment and instruction: life jacket, brief how-to for jet skis, tubing, or water skiing; parasailing includes harness and boat ride.",
+      "Your session: typically 15–30 minutes on the water (or in the air for parasailing).",
+      "Return to the start. Total time from check-in is usually 30–60 minutes depending on the activity.",
+    ],
+    whoIsThisFor: [
+      "Adrenaline seekers who want jet skis, parasailing, tubing, or flyboarding.",
+      "Couples and friends looking for a quick, fun activity between beach time.",
+      "Families with older kids or teens (check age limits per activity).",
+      "Anyone who wants to try something new without a full-day commitment.",
+    ],
+    highlights: [
+      "Jet ski rentals by the 30-minute session or longer",
+      "Parasailing with panoramic views of Aruba's coast",
+      "Water skiing, wakeboarding, tubing, flyboarding, and jetovator",
+      "Convenient locations on Palm Beach and Eagle Beach",
+    ],
     faqs: [
-      { question: "What water sports are available in Aruba?", answer: "Jet skis, parasailing, kayaking, paddleboarding, windsurfing, kitesurfing, and banana boats are widely available. Many operators are on the main beaches." },
-      { question: "Do I need to book water sports in Aruba in advance?", answer: "Walk-ups are often possible, but booking ahead secures your slot and can save money. Popular activities fill up in peak season." },
+      { question: "What water sports are available in Aruba?", answer: "Jet ski rentals, parasailing, water skiing, wakeboarding, tubing, flyboarding, and jetovator are widely available. Many operators are on Palm Beach and Eagle Beach. Kayaking and paddleboarding are also offered elsewhere." },
+      { question: "Do I need to book water sports in Aruba in advance?", answer: "Walk-ups are often possible, but booking ahead secures your slot and can save money. Jet skis, parasailing, and flyboarding fill up in peak season—book at least a few days ahead for popular times." },
+      { question: "How long are jet ski and parasailing sessions in Aruba?", answer: "Jet ski rentals are often 30 minutes; parasailing flights are typically 10–15 minutes in the air plus boat time. Tubing and flyboarding sessions are usually 15–30 minutes. Check each product for exact duration." },
+      { question: "Are there age or weight limits for water sports in Aruba?", answer: "Yes. Parasailing and some motorized activities have minimum age and weight requirements. Jet skis often require a valid driver's license. Check each product or contact the operator when you book." },
+      { question: "Where do water sports in Aruba operate from?", answer: "Most jet ski, parasailing, tubing, and flyboarding operators work from Palm Beach, Eagle Beach, or nearby marinas. Your confirmation will include the exact meeting point." },
     ],
   },
   {

@@ -719,6 +719,15 @@
     "freeCancellation": false,
     "productUrl": "https://shop.live.rc.viator.com/tours/Oranjestad/VIP-Luxury-SUV-Airport-Transfer/d50211-6687P7?mcid=42383&pid=P00276441&medium=api&api_version=2.0"
   },
+  "122173P3": {
+    "title": "Kayak Tour to Seaglass Island",
+    "fromPriceDisplay": "Price from $80",
+    "rating": 4.710145,
+    "reviewCount": 69,
+    "imageUrl": "https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/12/80/d5/26.jpg",
+    "freeCancellation": false,
+    "productUrl": "https://shop.live.rc.viator.com/tours/Aruba/Kayak-Tour-to-Seaglass-Island/d28-122173P3?mcid=42383&pid=P00276441&medium=api&api_version=2.0"
+  },
   "7389P5": {
     "title": "One Way Private Airport Transfer",
     "fromPriceDisplay": "Price from $68",
@@ -727,6 +736,15 @@
     "imageUrl": "https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/c4/fe/b2.jpg",
     "freeCancellation": false,
     "productUrl": "https://shop.live.rc.viator.com/tours/Aruba/One-Way-Private-Airport-Transfer/d28-7389P5?mcid=42383&pid=P00276441&medium=api&api_version=2.0"
+  },
+  "419440P1": {
+    "title": "Sea Glass Island Aruba Tour",
+    "fromPriceDisplay": "Price from $95",
+    "rating": 4.8530807,
+    "reviewCount": 211,
+    "imageUrl": "https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/11/81/f3/04.jpg",
+    "freeCancellation": false,
+    "productUrl": "https://shop.live.rc.viator.com/tours/Aruba/Sea-Glass-Island-Tour/d28-419440P1?mcid=42383&pid=P00276441&medium=api&api_version=2.0"
   },
   "2455AUAAPTRND": {
     "title": "Round Trip Aruba Airport Transfer",
@@ -790,5 +808,113 @@
     "imageUrl": "https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/03/a2/14.jpg",
     "freeCancellation": false,
     "productUrl": "https://shop.live.rc.viator.com/tours/Palm-Eagle-Beach/Roundtrip-Aruba-Airport-Private-Transfer/d50199-3046AUAAPTRND?mcid=42383&pid=P00276441&medium=api&api_version=2.0"
+  },
+  "102406P1": {
+    "title": "Aruba Parasailing with Unparalleled Views",
+    "fromPriceDisplay": "Price from $70",
+    "rating": 4.769392,
+    "reviewCount": 477,
+    "imageUrl": "https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/34/b4/4f.jpg",
+    "freeCancellation": false,
+    "productUrl": "https://shop.live.rc.viator.com/tours/Aruba/Parasailing/d28-102406P1?mcid=42383&pid=P00276441&medium=api&api_version=2.0"
+  },
+  "300281P10": {
+    "title": "Discover Sea Glass Island: Aruba’s Must-Do Adventure",
+    "fromPriceDisplay": "Price from $105",
+    "rating": 5,
+    "reviewCount": 40,
+    "imageUrl": "https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/12/80/84/57.jpg",
+    "freeCancellation": false,
+    "productUrl": "https://shop.live.rc.viator.com/tours/Aruba/Sea-Glass-Island-Kayak-Tour-Afternoon/d28-300281P10?mcid=42383&pid=P00276441&medium=api&api_version=2.0"
+  },
+  "119085P5": {
+    "title": "Aruba Water Skiing or Wakeboarding ",
+    "fromPriceDisplay": "Price from $90",
+    "rating": 4.869565,
+    "reviewCount": 23,
+    "imageUrl": "https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/11/b0/f3.jpg",
+    "freeCancellation": false,
+    "productUrl": "https://shop.live.rc.viator.com/tours/Aruba/Water-skiing-and-Wakeboarding/d28-119085P5?mcid=42383&pid=P00276441&medium=api&api_version=2.0"
+  },
+  "300281P7": {
+    "title": "Sunset Sea Glass Island Kayak Tour",
+    "fromPriceDisplay": "Price from $115",
+    "rating": 4.4915257,
+    "reviewCount": 59,
+    "imageUrl": "https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/11/59/7a/18.jpg",
+    "freeCancellation": false,
+    "productUrl": "https://shop.live.rc.viator.com/tours/Aruba/Sea-Glass-Island-Kayak-Sunset-Snorkeling-Tour/d28-300281P7?mcid=42383&pid=P00276441&medium=api&api_version=2.0"
+  },
+  "119085P4": {
+    "title": "Aruba Jet Ski Waverunner Rental ",
+    "fromPriceDisplay": "Price from $55",
+    "rating": 4.4301076,
+    "reviewCount": 186,
+    "imageUrl": "https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/2f/4d/a4.jpg",
+    "freeCancellation": false,
+    "productUrl": "https://shop.live.rc.viator.com/tours/Aruba/Jet-Ski-Waverunner-Rental-per-30-minutes/d28-119085P4?mcid=42383&pid=P00276441&medium=api&api_version=2.0"
+  },
+  "137607P22": {
+    "title": "Aruba Jet Ski Rental — Exciting Water Adventures Await",
+    "fromPriceDisplay": "Price from $58",
+    "rating": 4.385787,
+    "reviewCount": 197,
+    "imageUrl": "https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/8d/7d/54.jpg",
+    "freeCancellation": false,
+    "productUrl": "https://shop.live.rc.viator.com/tours/Aruba/Aruba-Jet-Ski-Rental-For-Exciting-Water-Adventures/d28-137607P22?mcid=42383&pid=P00276441&medium=api&api_version=2.0"
+  },
+  "358117P10": {
+    "title": "Sea Glass Island Tour By Boat",
+    "fromPriceDisplay": "Price from $100",
+    "rating": 4.2375,
+    "reviewCount": 80,
+    "imageUrl": "https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/15/c1/34/f5.jpg",
+    "freeCancellation": false,
+    "productUrl": "https://shop.live.rc.viator.com/tours/Aruba/Sea-Glass-Island-Tour-By-Boat/d28-358117P10?mcid=42383&pid=P00276441&medium=api&api_version=2.0"
+  },
+  "119085P3": {
+    "title": "Aruba Flyboarding Experience: Fly Like a Bird",
+    "fromPriceDisplay": "Price from $150",
+    "rating": 4.6969695,
+    "reviewCount": 66,
+    "imageUrl": "https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/0b/62/79.jpg",
+    "freeCancellation": false,
+    "productUrl": "https://shop.live.rc.viator.com/tours/Aruba/Flyboarding-and-Jetovator-30-min/d28-119085P3?mcid=42383&pid=P00276441&medium=api&api_version=2.0"
+  },
+  "358117P3": {
+    "title": "Sea Glass Island and Clear Kayak Adventure",
+    "fromPriceDisplay": "Price from $100",
+    "rating": 4.4720497,
+    "reviewCount": 161,
+    "imageUrl": "https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/15/70/c5/38.jpg",
+    "freeCancellation": false,
+    "productUrl": "https://shop.live.rc.viator.com/tours/Aruba/Sea-Glass-Island-and-Clear-Kayak-Adventure/d28-358117P3?mcid=42383&pid=P00276441&medium=api&api_version=2.0"
+  },
+  "300281P12": {
+    "title": "Private Sea Glass Island Kayak Morning + Transfer",
+    "fromPriceDisplay": "Price from $155",
+    "rating": 4.5,
+    "reviewCount": 2,
+    "imageUrl": "https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/15/6f/53/80.jpg",
+    "freeCancellation": false,
+    "productUrl": "https://shop.live.rc.viator.com/tours/Aruba/Sea-Glass-Island-Kayak-Tour-Morning-Adventure/d28-300281P12?mcid=42383&pid=P00276441&medium=api&api_version=2.0"
+  },
+  "119085P6": {
+    "title": "Exciting Tube Ride in Aruba",
+    "fromPriceDisplay": "Price from $25",
+    "rating": 4.8135595,
+    "reviewCount": 177,
+    "imageUrl": "https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/2f/4d/8e.jpg",
+    "freeCancellation": false,
+    "productUrl": "https://shop.live.rc.viator.com/tours/Aruba/Tube-Ride-15-minutes/d28-119085P6?mcid=42383&pid=P00276441&medium=api&api_version=2.0"
+  },
+  "8936P2": {
+    "title": "Aruba Parasailing Experience from Noord",
+    "fromPriceDisplay": "Price from $70",
+    "rating": 4.771318,
+    "reviewCount": 258,
+    "imageUrl": "https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/12/77/fb/00.jpg",
+    "freeCancellation": false,
+    "productUrl": "https://shop.live.rc.viator.com/tours/Aruba/Aruba-Parasailing-Adventure/d28-8936P2?mcid=42383&pid=P00276441&medium=api&api_version=2.0"
   }
 }

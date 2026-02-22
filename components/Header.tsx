@@ -5,11 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { pillars } from "@/data/pillars";
 
-const HIDDEN_IN_NAV = [
-  "sea-glass-island-aruba",
-  "water-sports-and-rentals-in-aruba",
-  "things-to-do-in-aruba-with-kids",
-];
+const HIDDEN_IN_NAV = ["things-to-do-in-aruba-with-kids"];
 
 /** Nav label: strip " in Aruba" so we show e.g. "Catamaran Cruises" not "Catamaran Cruises in Aruba". */
 function navCategoryLabel(title: string): string {

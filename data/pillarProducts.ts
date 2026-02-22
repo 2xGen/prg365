@@ -120,6 +120,24 @@ export const pillarProductCodes: Record<string, string[]> = {
     "7389P5",          // One-Way Private Airport Transfer
     "5568850P2",       // Private airport transfers (Oranjestad)
   ],
+  "sea-glass-island-aruba": [
+    "419440P1",        // Sea Glass Island Tour
+    "122173P3",        // Kayak Tour to Seaglass Island
+    "358117P3",        // Sea Glass Island and Clear Kayak Adventure
+    "300281P10",       // Sea Glass Island Kayak Tour Afternoon
+    "358117P10",       // Sea Glass Island Tour By Boat
+    "300281P7",        // Sea Glass Island Kayak Sunset Snorkeling Tour
+    "300281P12",       // Sea Glass Island Kayak Tour Morning Adventure
+  ],
+  "water-sports-and-rentals-in-aruba": [
+    "119085P5",        // Water skiing and Wakeboarding
+    "137607P22",       // Aruba Jet Ski Rental
+    "119085P3",        // Flyboarding and Jetovator 30 min
+    "119085P4",        // Jet Ski Waverunner Rental 30 min
+    "102406P1",        // Parasailing
+    "119085P6",        // Tube Ride 15 min
+    "8936P2",          // Aruba Parasailing Adventure
+  ],
 };
 
 /** Returns all product codes for the pillar; same list is used for one bulk API call. First 4 = top picks, rest = more options. */

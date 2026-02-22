@@ -229,6 +229,22 @@ const staticByCode: Record<
   "5597840P1": { title: "Aruba Private Airport Transfer", fromPriceDisplay: "Price from $42", rating: 0, reviewCount: 0, imageUrl: null },
   "7389P5": { title: "One-Way Private Airport Transfer", fromPriceDisplay: "Price from $38", rating: 0, reviewCount: 0, imageUrl: null },
   "5568850P2": { title: "Private Airport Transfers", fromPriceDisplay: "Price from $40", rating: 0, reviewCount: 0, imageUrl: null },
+  // Sea Glass Island (Aruba) — fallback until dump
+  "419440P1": { title: "Sea Glass Island Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "122173P3": { title: "Kayak Tour to Seaglass Island", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "358117P3": { title: "Sea Glass Island and Clear Kayak Adventure", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "300281P10": { title: "Sea Glass Island Kayak Tour Afternoon", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "358117P10": { title: "Sea Glass Island Tour By Boat", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "300281P7": { title: "Sea Glass Island Kayak Sunset Snorkeling Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "300281P12": { title: "Sea Glass Island Kayak Tour Morning Adventure", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  // Water sports (Aruba) — fallback until dump
+  "119085P5": { title: "Water Skiing and Wakeboarding", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "137607P22": { title: "Aruba Jet Ski Rental", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "119085P3": { title: "Flyboarding and Jetovator 30 min", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "119085P4": { title: "Jet Ski Waverunner Rental", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "102406P1": { title: "Parasailing", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "119085P6": { title: "Tube Ride 15 minutes", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "8936P2": { title: "Aruba Parasailing Adventure", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
 };
 
 /**

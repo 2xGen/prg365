@@ -43,6 +43,14 @@ import {
   airportTransfersCategorySlug,
   airportTransfersListings,
 } from "./airportTransfersListings";
+import {
+  seaGlassCategorySlug,
+  seaGlassListings,
+} from "./seaGlassListings";
+import {
+  waterSportsCategorySlug,
+  waterSportsListings,
+} from "./waterSportsListings";
 
 export type { TourListing };
 
@@ -57,6 +65,8 @@ const listingMap: Record<string, TourListing[]> = {
   [horsebackRidingCategorySlug]: horsebackRidingListings,
   [photoshootsCategorySlug]: photoshootsListings,
   [airportTransfersCategorySlug]: airportTransfersListings,
+  [seaGlassCategorySlug]: seaGlassListings,
+  [waterSportsCategorySlug]: waterSportsListings,
 };
 
 /** Category slugs that have tour listing pages (for routing) */
@@ -71,6 +81,8 @@ export const categorySlugsWithListings: string[] = [
   horsebackRidingCategorySlug,
   photoshootsCategorySlug,
   airportTransfersCategorySlug,
+  seaGlassCategorySlug,
+  waterSportsCategorySlug,
 ];
 
 /** Resolve a tour listing by category and tour slug; returns null if not found */

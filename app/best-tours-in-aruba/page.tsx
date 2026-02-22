@@ -40,11 +40,7 @@ const bestToursSchema = {
 };
 
 /** One tour per category for the top picks section (first product code per pillar). */
-const HIDDEN_ON_BEST_TOURS = [
-  "sea-glass-island-aruba",
-  "water-sports-and-rentals-in-aruba",
-  "things-to-do-in-aruba-with-kids",
-];
+const HIDDEN_ON_BEST_TOURS = ["things-to-do-in-aruba-with-kids"];
 const CATEGORY_SLUGS_WITH_PICKS = (Object.keys(pillarProductCodes) as string[]).filter(
   (s) => !HIDDEN_ON_BEST_TOURS.includes(s)
 );

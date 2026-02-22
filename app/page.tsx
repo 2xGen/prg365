@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 };
 
 /** Home shows one tour per category using the second pick (index 1) so it differs from best-tours-in-aruba (first pick). */
-const HIDDEN_ON_HOMEPAGE = ["airport-transfers-in-aruba", "sea-glass-island-aruba", "water-sports-and-rentals-in-aruba", "things-to-do-in-aruba-with-kids"];
+const HIDDEN_ON_HOMEPAGE = ["airport-transfers-in-aruba", "things-to-do-in-aruba-with-kids"];
 const CATEGORY_SLUGS = (Object.keys(pillarProductCodes) as string[]).filter((s) => !HIDDEN_ON_HOMEPAGE.includes(s));
 const PICK_INDEX = 1;
 

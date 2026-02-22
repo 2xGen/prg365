@@ -3780,6 +3780,194 @@ const guides: GuidePage[] = [
       { question: "Do I need to book in advance for transfer with tour?", answer: "Yes. Transfer-and-tour combos require coordination (vehicle, guide, route). Book at least 24–48 hours ahead; more in peak season." },
     ],
   },
+  // ————— Sea Glass Island in Aruba —————
+  {
+    categorySlug: "sea-glass-island-aruba",
+    slug: "how-to-get-there",
+    title: "How to Get to Sea Glass Island in Aruba: Kayak vs Boat Tours",
+    description:
+      "How to get to Sea Glass Island in Aruba—no road or ferry. Visit by guided kayak tour or boat tour from the coast. Compare departure points, duration, and which option suits families or beginners. Book Sea Glass Island tours in advance.",
+    picks: [
+      { slug: "sea-glass-island-tour", whyWePickIt: "A straightforward Sea Glass Island tour with guide and equipment. Reaches the island by kayak or boat so you can explore the sea glass beach without organizing transport yourself.", bestFor: ["First-time visitors", "Anyone who wants a guided experience", "Families and couples"] },
+      { slug: "sea-glass-island-tour-by-boat", whyWePickIt: "Reach Sea Glass Island by boat—no kayaking required. Ideal if you prefer not to paddle or want a quicker, more relaxed way to the island. Good for young kids and non-kayakers.", bestFor: ["Non-kayakers", "Families with young children", "Quick, relaxed access"] },
+      { slug: "kayak-tour-seaglass-island", whyWePickIt: "Classic kayak tour to Seaglass Island. Paddle from the coast with equipment and guide; the journey is part of the experience. Suitable for beginners.", bestFor: ["Kayakers and beginners", "Scenic paddle + island visit", "2–3 hour adventure"] },
+    ],
+    intro: "Sea Glass Island in Aruba has no road access and no public ferry—the only way to visit is by water. Your options are a guided kayak tour or a boat tour, both departing from the Aruba coast (beach or marina). Kayak tours let you paddle to the island with a guide and provided equipment; boat tours take you there by motorized boat with no paddling. Either way you get time on the famous sea glass beach. This page explains how to get to Sea Glass Island, where tours leave from, how long the journey takes, and how to choose kayak vs boat. Book in advance; Sea Glass Island tours fill quickly, especially in high season.",
+    whyBlock: {
+      title: "Why go to Sea Glass Island with a guided tour?",
+      content:
+        "Sea Glass Island has no road access and no public ferry. A guided tour gives you transport (kayak or boat), equipment, a safety briefing, and a set time on the island so you don't have to worry about how to get there or back. Operators know the best launch points and routes and can reschedule if weather is poor. You get a hassle-free, memorable experience with a clear start and end time.",
+    },
+    whatToExpect: [
+      "Meet at the operator's designated point (beach or marina). Check in and get a safety briefing.",
+      "Kayak or boat to Sea Glass Island. Kayak tours take 15–30 minutes of paddling each way; boat tours are quicker.",
+      "Time on the island to walk the sea glass beach, take photos, and learn from your guide.",
+      "Return by kayak or boat. Total duration is typically 2–3 hours.",
+    ],
+    faqs: [
+      { question: "Can I get to Sea Glass Island without a tour?", answer: "No. There is no public ferry or road. Access is only by private boat or, in practice, by booking a guided kayak or boat tour. Tours are the standard and safest way to visit." },
+      { question: "How long does it take to get to Sea Glass Island?", answer: "By kayak, usually 15–30 minutes of paddling each way, depending on the launch point. By boat, the ride is shorter—often 10–20 minutes. Your guide will set the pace." },
+      { question: "Where do Sea Glass Island tours depart from?", answer: "Departure points vary by operator—often a beach or marina on Aruba's coast. Your confirmation will include the exact meeting point, address, and check-in time." },
+      { question: "Do I need to kayak to get to Sea Glass Island?", answer: "No. You can choose a boat-only tour that takes you to the island without kayaking. Kayak tours are popular for the experience; boat tours are better if you prefer not to paddle." },
+      { question: "How far in advance should I book a tour to Sea Glass Island?", answer: "Book at least a few days ahead in high season. Tours have limited capacity and fill quickly. Last-minute bookings may be possible but aren't guaranteed." },
+    ],
+  },
+  {
+    categorySlug: "sea-glass-island-aruba",
+    slug: "best-tours",
+    title: "Best Sea Glass Island Tours in Aruba: Kayak, Boat & Sunset Options",
+    description:
+      "Best Sea Glass Island tours in Aruba compared: morning and afternoon kayak tours, clear kayak adventures, boat-only tours, and sunset kayak snorkeling. See top-rated options, what's included, and who each tour suits. Book with free cancellation.",
+    picks: [
+      { slug: "sea-glass-island-clear-kayak-adventure", whyWePickIt: "Stand out with a clear kayak—see the water beneath you as you paddle to Sea Glass Island. Unique experience and great photos. Guided and suitable for beginners.", bestFor: ["Unique experience", "Couples and photo lovers", "Clear kayak fans"] },
+      { slug: "sea-glass-island-kayak-sunset-snorkeling", whyWePickIt: "Kayak at sunset, snorkel, and visit Sea Glass Island in one tour. Golden-hour light and a memorable end to the day. Equipment and guide included.", bestFor: ["Sunset and snorkeling", "Couples", "Full experience in one trip"] },
+      { slug: "sea-glass-island-kayak-morning", whyWePickIt: "Morning kayak to Sea Glass Island—calm water, cooler temps, and an early adventure. Ideal for early risers who want the rest of the day free.", bestFor: ["Morning people", "Calm water", "Half-day adventure"] },
+      { slug: "sea-glass-island-kayak-afternoon", whyWePickIt: "Afternoon kayak tour to Sea Glass Island. No early start; paddle and explore in the afternoon. Good for travelers who prefer a relaxed morning.", bestFor: ["Afternoon departures", "Relaxed schedule", "2–3 hour experience"] },
+    ],
+    intro: "The best Sea Glass Island tours in Aruba cover a range of styles: morning and afternoon kayak trips for calmer water and flexible timing, clear kayak adventures for unique views and photos, boat-only tours for families and non-kayakers, and sunset kayak and snorkel combos for couples and golden-hour seekers. Every option takes you to the famous sea glass beach with a guide and equipment included. This page compares the top Sea Glass Island tours—what each one offers, who it's best for, and how to choose by time of day, activity level, and whether you want kayaking, snorkeling, or a relaxed boat ride.",
+    whyBlock: {
+      title: "Why book a Sea Glass Island tour?",
+      content:
+        "Sea Glass Island is one of Aruba's most unique attractions—a beach covered in decades of tumbled glass. Booking a tour ensures you get there safely (by kayak or boat), with equipment and a guide who knows the route and can share the story behind the sea glass. You'll have a set time on the island and a clear return, so you can relax and enjoy the experience instead of worrying about logistics.",
+    },
+    whatToExpect: [
+      "Check-in and safety briefing at the operator's meeting point.",
+      "Kayak or boat ride to Sea Glass Island (duration varies by tour type).",
+      "Time on the island to explore the sea glass beach, take photos, and learn from your guide.",
+      "Return to the starting point. Most tours run 2–3 hours total.",
+    ],
+    faqs: [
+      { question: "What is the best Sea Glass Island tour for beginners?", answer: "Boat tours (no kayaking) or short kayak tours with stable sit-on-top kayaks are best. Operators give instruction and choose calm routes. Clear kayak tours are also beginner-friendly." },
+      { question: "Which Sea Glass Island tour is best for couples?", answer: "Clear kayak adventures and sunset kayak snorkeling tours are popular with couples—unique experience and romantic timing. Boat tours are also a relaxed option for couples who prefer not to paddle." },
+      { question: "Are there Sea Glass Island tours for families with kids?", answer: "Yes. Boat tours are often best for young children. Kayak tours may have minimum ages; some operators offer tandem kayaks so an adult can paddle with a child. Check each product for age requirements." },
+      { question: "How do I choose between morning and afternoon Sea Glass Island tours?", answer: "Morning tours usually have calmer water and cooler temps; afternoon suits those who prefer to sleep in. Sunset tours offer golden light and a memorable end to the day. All are good—pick by your schedule and preference." },
+      { question: "Do the best Sea Glass Island tours include equipment?", answer: "Yes. Kayak tours include kayak, paddle, and life jacket; snorkel tours include gear if snorkeling is part of the trip. Boat tours include the boat ride. Check each product for full inclusions." },
+    ],
+  },
+  {
+    categorySlug: "sea-glass-island-aruba",
+    slug: "what-to-expect",
+    title: "What to Expect on a Sea Glass Island Tour in Aruba: Itinerary & Tips",
+    description:
+      "What to expect on a Sea Glass Island tour in Aruba: full itinerary from check-in to return, how long the tour takes, what to bring (water shoes, sunscreen, dry bag), and first-timer tips. Kayak and boat tour formats explained.",
+    picks: [
+      { slug: "sea-glass-island-tour", whyWePickIt: "A classic Sea Glass Island tour that covers the full experience: briefing, transport to the island, and time on the sea glass beach. Good baseline for what to expect.", bestFor: ["First-timers", "Classic experience", "Guided from start to finish"] },
+      { slug: "sea-glass-island-kayak-morning", whyWePickIt: "Morning tour so you know what to expect in terms of timing and conditions—calm water, cooler temps, and a clear 2–3 hour window.", bestFor: ["Predictable conditions", "Morning routine", "Half-day plan"] },
+      { slug: "sea-glass-island-tour-by-boat", whyWePickIt: "Boat tour so you know exactly what to expect: no kayaking, just a boat ride and time on the island. Simplest format.", bestFor: ["No surprises", "Relaxed format", "Families and non-kayakers"] },
+    ],
+    intro: "A typical Sea Glass Island tour in Aruba follows a simple flow: check-in at a beach or marina, a safety briefing and equipment handout (for kayak tours), then the journey to the island by kayak or boat. Once there you'll have 30–60 minutes or more on the sea glass beach to walk, take photos, and learn how the glass got there. Then you'll return the same way. Total duration is usually 2–3 hours. This page walks you through exactly what to expect—step by step—plus what to bring (swimwear, water shoes, sunscreen, waterproof bag for your phone), whether you need kayak experience, and what the sea glass beach is like so you're fully prepared for your first Sea Glass Island tour.",
+    whyBlock: {
+      title: "Why know what to expect before you book?",
+      content:
+        "Knowing what to expect helps you choose the right tour (kayak vs boat, morning vs sunset), pack the right gear (water shoes, sunscreen, dry bag), and feel confident on the day. Tours are well run and suitable for beginners, but a quick read of the itinerary and inclusions makes the experience smoother and more enjoyable.",
+    },
+    whatToExpect: [
+      "Check-in: arrive at the meeting point 10–15 minutes early. You'll sign in and get a safety briefing.",
+      "Equipment: for kayak tours, you'll get a life jacket and paddle; the guide will show you how to use them. For boat tours, you'll board and find a seat.",
+      "Journey: paddle or cruise to Sea Glass Island. The ride is part of the experience—enjoy the views.",
+      "Island time: walk the sea glass beach, take photos, ask your guide questions. Respect any rules about collecting glass.",
+      "Return: paddle or boat back to the start. Total duration is typically 2–3 hours from check-in.",
+    ],
+    faqs: [
+      { question: "How long is a typical Sea Glass Island tour?", answer: "Most tours run 2–3 hours from check-in to return. That includes the paddle or boat ride (each way) and time on the island. Sunset or snorkel combos may be slightly longer." },
+      { question: "What should I bring on a Sea Glass Island tour?", answer: "Wear swimwear or quick-dry clothes, water shoes or sandals, and sunscreen. Bring a towel and a waterproof bag for your phone or camera. Some operators provide water; check when you book." },
+      { question: "Do I need to know how to kayak?", answer: "No. Tours are designed for all levels. You'll get instruction and a safety briefing. Sit-on-top kayaks are stable; the guide stays with the group. If you prefer not to kayak, choose a boat tour." },
+      { question: "What is the sea glass beach like?", answer: "The beach is covered in small, smooth pieces of glass in many colors—greens, blues, whites, browns—washed up over decades. You walk on sand and glass; it's unique and photogenic. Your guide can explain how it formed." },
+      { question: "What if the weather is bad on the day of my tour?", answer: "Operators may reschedule or cancel for safety (e.g. high wind or rough seas). They'll usually offer another date or a refund. Check the operator's policy when you book." },
+    ],
+  },
+  // ————— Water Sports and Rentals in Aruba —————
+  {
+    categorySlug: "water-sports-and-rentals-in-aruba",
+    slug: "jet-ski",
+    title: "Jet Ski Rentals in Aruba: Compare Options & Book",
+    description:
+      "Compare jet ski rentals in Aruba. Solo and double seater options, 30-minute and hourly rentals. Palm Beach and Eagle Beach. Instruction and life jacket included. Book with free cancellation.",
+    picks: [
+      { slug: "aruba-jet-ski-rental", whyWePickIt: "Aruba jet ski rental for water adventures—solo or double seater with instruction and a designated riding area. Explore the coast at your own pace with a safety briefing included.", bestFor: ["Freedom on the water", "Solo or tandem ride", "Scenic coast exploration"] },
+      { slug: "jet-ski-waverunner-rental", whyWePickIt: "Rent a jet ski Waverunner by the 30-minute block. Flexible and ideal for a short burst of fun or first-timers who want to try without committing to a full hour.", bestFor: ["30-minute sessions", "First-timers", "Quick activity"] },
+    ],
+    intro: "Jet ski rentals in Aruba let you drive your own watercraft along the coast—no guide required, just a safety briefing and a defined riding area. You can choose solo or double seater and often rent by 30 minutes or an hour. Most operators work from Palm Beach or Eagle Beach. This page compares the best jet ski rentals in Aruba: what's included, how long you can ride, and who each option suits so you can book the right experience.",
+    whyBlock: {
+      title: "Why rent a jet ski in Aruba?",
+      content:
+        "Aruba's calm leeward waters and scenic coastline are ideal for jet skiing. Renting gives you the freedom to explore at your own pace—within the operator's zone—without following a guide. Sessions are short (typically 30–60 minutes), so you can fit jet skiing into a beach day. Most rentals include instruction and life jackets; you usually need a valid driver's license to operate the craft. A popular choice for couples and friends who want a quick adrenaline hit.",
+    },
+    whatToExpect: [
+      "Check-in at the operator's beach or marina kiosk. Sign a waiver and get a safety briefing.",
+      "Instruction on how to operate the jet ski (start, steer, throttle). Life jacket provided.",
+      "Your rental time on the water in the designated area. Solo or double seater depending on your booking.",
+      "Return the jet ski at the end of your session. Total time from check-in is usually 30–60 minutes.",
+    ],
+    faqs: [
+      { question: "How long can I rent a jet ski in Aruba?", answer: "Rentals are often 30 minutes or 1 hour. Some operators offer longer blocks. Your time starts after the safety briefing. Check each product for exact duration." },
+      { question: "Do I need a license to drive a jet ski in Aruba?", answer: "Most operators require a valid driver's license to operate the jet ski. Minimum age for the driver applies. Passengers may have different age limits. Confirm when you book." },
+      { question: "Where do jet ski rentals operate in Aruba?", answer: "Jet ski rentals typically operate from Palm Beach, Eagle Beach, or a nearby marina. Your confirmation will include the exact meeting point and check-in time." },
+      { question: "Can two people ride one jet ski in Aruba?", answer: "Yes. Many jet skis are two-seater (driver and passenger). Only the licensed driver may operate the craft. Check the product for single vs double seater." },
+      { question: "Is jet ski rental in Aruba safe for beginners?", answer: "Yes. You get a safety briefing and instruction. Operators define a riding area and rules. Stay within the zone and follow the guidelines for a safe, fun ride." },
+    ],
+  },
+  {
+    categorySlug: "water-sports-and-rentals-in-aruba",
+    slug: "parasailing",
+    title: "Parasailing in Aruba: Best Tours & What to Expect",
+    description:
+      "Parasailing in Aruba compared. Solo and tandem flights, 10–15 minutes in the air. Panoramic views of the coast. Equipment and boat ride included. Book with free cancellation.",
+    picks: [
+      { slug: "parasailing", whyWePickIt: "Classic parasailing in Aruba—soar above the Caribbean with panoramic views. Solo or tandem, equipment and boat ride included. One of the island's most popular water sports.", bestFor: ["First-timers and repeat flyers", "Solo or tandem", "Stunning views"] },
+      { slug: "aruba-parasailing-adventure", whyWePickIt: "Aruba parasailing adventure with a relaxed vibe. Take off from the boat and enjoy 10–15 minutes in the air. Equipment and safety briefing included.", bestFor: ["Couples and friends", "Unforgettable views", "No experience needed"] },
+    ],
+    intro: "Parasailing in Aruba means taking off from a boat and soaring behind it under a parachute—you get 10–15 minutes in the air with panoramic views of the coast and ocean. Most operators offer solo and tandem flights; equipment, harness, and boat ride are included. No experience is needed. This page compares the best parasailing in Aruba: what to expect, how long the experience lasts, and who each tour suits so you can book with confidence.",
+    whyBlock: {
+      title: "Why go parasailing in Aruba?",
+      content:
+        "Parasailing is one of the easiest ways to get a bird's-eye view of Aruba—thrilling but not physically demanding. You're harnessed and towed by a boat; take-off and landing are smooth. Flights last 10–15 minutes; the whole experience fits into about an hour. Ideal for couples (tandem), first-timers, and anyone who wants unforgettable views without needing any skill. Book in advance for your preferred time; operators often run multiple trips per day.",
+    },
+    whatToExpect: [
+      "Check-in at the operator's beach or marina. Sign a waiver and get a safety briefing.",
+      "Board the parasailing boat and cruise to the flight area. You'll be fitted with a harness.",
+      "Take off from the boat—you'll ascend gradually. Enjoy 10–15 minutes in the air with panoramic views.",
+      "Land back on the boat and return to shore. Total experience is typically 30–60 minutes from check-in.",
+    ],
+    faqs: [
+      { question: "How long is the parasailing flight in Aruba?", answer: "You're typically in the air 10–15 minutes. Total time from check-in to finish—including boat ride and briefing—is usually 30–60 minutes." },
+      { question: "Can I parasail with another person in Aruba?", answer: "Yes. Many operators offer tandem parasailing so two people can fly together. Check the product for tandem availability and any weight limits." },
+      { question: "Are there weight limits for parasailing in Aruba?", answer: "Yes. There are usually minimum and maximum weight limits for safety (solo and tandem). Check the product or contact the operator when you book." },
+      { question: "Is parasailing in Aruba safe?", answer: "Yes. Operators use certified equipment and give a safety briefing. You're harnessed and connected to the boat. Flights may be rescheduled if weather is unsuitable." },
+      { question: "Where does parasailing in Aruba depart from?", answer: "Parasailing typically departs from a beach or marina on Palm Beach or Eagle Beach. Your confirmation will include the exact meeting point." },
+    ],
+  },
+  {
+    categorySlug: "water-sports-and-rentals-in-aruba",
+    slug: "water-skiing-tubing-flyboarding",
+    title: "Water Skiing, Tubing & Flyboarding in Aruba",
+    description:
+      "Water skiing, wakeboarding, tubing, flyboarding, and jetovator in Aruba. Compare sessions, duration, and what's included. Equipment and instruction. Book with free cancellation.",
+    picks: [
+      { slug: "water-skiing-wakeboarding", whyWePickIt: "Water skiing and wakeboarding in Aruba—guided session behind a boat with equipment and instruction. Suitable for beginners and experienced riders. Classic adrenaline on the water.", bestFor: ["Water ski and wakeboard fans", "Beginners and experienced", "Boat-tow thrills"] },
+      { slug: "flyboarding-jetovator", whyWePickIt: "Flyboarding and jetovator in Aruba—30-minute session flying above the water on a water jet. Unique, high-adrenaline experience with instruction included.", bestFor: ["Thrill-seekers", "Unique experience", "Instagram-worthy"] },
+      { slug: "tube-ride", whyWePickIt: "15-minute tube ride in Aruba—towed behind a speedboat on an inflatable tube. No skill required; just hold on and enjoy. Great for families and friends.", bestFor: ["Families with older kids", "Quick thrill", "No experience needed"] },
+    ],
+    intro: "Beyond jet skis and parasailing, Aruba offers water skiing, wakeboarding, tubing, flyboarding, and jetovator—all high-energy activities with equipment and instruction included. Water skiing and wakeboarding give you a tow behind a boat; tubing is a shorter, no-skill ride on an inflatable; flyboarding and jetovator use a water jet to propel you above the surface. This page compares these options: session length, what to expect, and who each activity suits so you can pick the right one for your group.",
+    whyBlock: {
+      title: "Why try water skiing, tubing, or flyboarding in Aruba?",
+      content:
+        "These activities deliver strong thrills in a short window—typically 15–30 minutes. Water skiing and wakeboarding are classic boat-tow sports; tubing is easier (just hold on); flyboarding and jetovator are unique and memorable. All are run by operators who provide equipment and instruction, so beginners can join. Ideal for adrenaline seekers, families with older kids, and anyone who wants to try something different without a full-day commitment.",
+    },
+    whatToExpect: [
+      "Check-in at the operator's beach or marina. Sign a waiver and get a safety briefing.",
+      "Equipment and instruction: life jacket, brief how-to for your activity (skis, tube, or flyboard).",
+      "Your session: 15–30 minutes on the water (or in the air for flyboarding). The crew will guide you.",
+      "Return to the start. Total time from check-in is usually 30–60 minutes depending on the activity.",
+    ],
+    faqs: [
+      { question: "How long are water skiing, tubing, and flyboarding sessions in Aruba?", answer: "Tubing is often 15 minutes; water skiing and wakeboarding may be one or more runs; flyboarding and jetovator are typically 30 minutes. Total time from check-in is usually 30–60 minutes." },
+      { question: "Do I need experience for water skiing, tubing, or flyboarding?", answer: "Tubing requires no skill. Water skiing and wakeboarding suit beginners—you'll get instruction. Flyboarding and jetovator also welcome beginners; the operator will help you get the hang of it." },
+      { question: "What is flyboarding and jetovator?", answer: "Flyboarding uses a board connected to a water jet—you're propelled into the air. Jetovator is a similar device. Both let you hover and move above the water. Instruction is included." },
+      { question: "Is tubing in Aruba good for kids?", answer: "Many operators allow kids on the tube with a minimum age (e.g. 8 or 10). There may be weight limits. Water skiing and flyboarding often have age/weight restrictions—check each product." },
+      { question: "Where do these water sports take place in Aruba?", answer: "Activities typically run from a beach or marina on Aruba's coast (e.g. Palm Beach, Eagle Beach area). Your confirmation will include the exact meeting point." },
+    ],
+  },
 ];
 
 /** Get a guide by category slug and guide slug (e.g. "catamaran-cruises-in-aruba", "morning-cruises") */
