@@ -15,7 +15,7 @@ import type { Metadata } from "next";
 
 const SITE_URL = "https://prg365.com";
 const DEFAULT_OG_IMAGE =
-  "https://soaacpusdhyxwucjhhpy.supabase.co/storage/v1/object/public/aru365/aru365%20tours%20and%20excursions%20in%20aruba.png";
+  "https://soaacpusdhyxwucjhhpy.supabase.co/storage/v1/object/public/aru365/Prg365.png";
 
 export const metadata: Metadata = {
   title: "Find & Book Best Tours in Prague | Prg365",

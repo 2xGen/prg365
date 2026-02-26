@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 
 const SITE_URL = "https://aru365.com";
 const DEFAULT_OG_IMAGE =
-  "https://soaacpusdhyxwucjhhpy.supabase.co/storage/v1/object/public/aru365/aru365%20tours%20and%20excursions%20in%20aruba.png";
+  "https://soaacpusdhyxwucjhhpy.supabase.co/storage/v1/object/public/aru365/Prg365.png";
 
 export const metadata: Metadata = {
   title: "Partner with us | Feature your Aruba tours on Aru365",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Get your Aruba tours or experiences featured on Aru365. Contact us by email or WhatsApp to partner with us.",
   openGraph: {
     url: `${SITE_URL}/partner`,
-    images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: "Aru365 – Tours and excursions in Aruba" }],
+    images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: "Prg365 – Tours and experiences in Prague" }],
   },
   alternates: { canonical: `${SITE_URL}/partner` },
 };

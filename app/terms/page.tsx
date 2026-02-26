@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 
 const SITE_URL = "https://aru365.com";
 const DEFAULT_OG_IMAGE =
-  "https://soaacpusdhyxwucjhhpy.supabase.co/storage/v1/object/public/aru365/aru365%20tours%20and%20excursions%20in%20aruba.png";
+  "https://soaacpusdhyxwucjhhpy.supabase.co/storage/v1/object/public/aru365/Prg365.png";
 
 export const metadata: Metadata = {
   title: "Terms and Conditions | Aru365",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Terms and conditions for using Aru365. We are an affiliate platform; we do not process bookings or personal data. Bookings are made with Viator.",
   openGraph: {
     url: `${SITE_URL}/terms`,
-    images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: "Aru365 – Tours and excursions in Aruba" }],
+    images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: "Prg365 – Tours and experiences in Prague" }],
   },
   alternates: { canonical: `${SITE_URL}/terms` },
 };
