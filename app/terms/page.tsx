@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 
 const SITE_URL = "https://aru365.com";
 const DEFAULT_OG_IMAGE =
-  "https://soaacpusdhyxwucjhhpy.supabase.co/storage/v1/object/public/aru365/Prg365.png";
+  "https://soaacpusdhyxwucjhhpy.supabase.co/storage/v1/object/public/aru365/best%20tours%20in%20prague.png";
 
 export const metadata: Metadata = {
   title: "Terms and Conditions | Aru365",

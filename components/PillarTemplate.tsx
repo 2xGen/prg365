@@ -133,7 +133,7 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
           <section aria-labelledby="picks-heading">
             <p className="text-sm font-medium text-prg-red uppercase tracking-wider">Top picks</p>
             <h2 id="picks-heading" className="font-display font-bold text-2xl text-slate-900 mt-1 mb-8" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
-              Popular choices — see options &amp; book
+              Popular choices — view &amp; book
             </h2>
             <div className="grid sm:grid-cols-2 gap-6">
               {showViatorCards
@@ -172,16 +172,20 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
                               <span className="text-slate-500">{p.reviewCount.toLocaleString("en-US")} reviews</span>
                             )}
                           </div>
-                          <p className="mt-1 text-slate-600 font-medium">{p.fromPriceDisplay}</p>
-                          {p.freeCancellation && (
-                            <p className="mt-1 text-emerald-600 text-xs font-medium">Free cancellation</p>
-                          )}
-                          <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-prg-red">
-                            {listing ? "View details & book" : "View full details &amp; book"}
-                            <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                            </svg>
-                          </span>
+                          <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
+                            <div>
+                              <p className="text-slate-600 font-medium">{p.fromPriceDisplay}</p>
+                              {p.freeCancellation && (
+                                <p className="mt-1 text-emerald-600 text-xs font-medium">Free cancellation</p>
+                              )}
+                            </div>
+                            <span className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-prg-red group-hover:bg-prg-red-dark transition-colors shadow-sm">
+                              {listing ? "View & book" : "View &amp; book"}
+                              <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                              </svg>
+                            </span>
+                          </div>
                         </div>
                       </>
                     );
@@ -206,13 +210,15 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
                       <h3 className="font-display font-bold text-lg text-slate-900 group-hover:text-prg-red transition-colors" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
                         {tour.title}
                       </h3>
-                      <p className="mt-2 text-slate-500 text-sm">{tour.fromPriceLabel ?? `From $${tour.fromPrice}`}</p>
-                      <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-prg-red">
-                        See options &amp; book
-                        <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </span>
+                      <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
+                        <p className="text-slate-600 text-sm font-medium">{tour.fromPriceLabel ?? `From $${tour.fromPrice}`}</p>
+                        <span className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-prg-red group-hover:bg-prg-red-dark transition-colors shadow-sm">
+                          View &amp; book
+                          <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </span>
+                      </div>
                     </a>
                   ))}
             </div>
@@ -252,13 +258,15 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
                           {p.rating > 0 && p.reviewCount > 0 && " · "}
                           {p.reviewCount > 0 && <span>{p.reviewCount.toLocaleString("en-US")} reviews</span>}
                         </div>
-                        <p className="mt-1 text-slate-600 text-sm font-medium">{p.fromPriceDisplay}</p>
-                        <span className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-prg-red">
-                          View details &amp; book
-                          <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
-                        </span>
+                        <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
+                          <p className="text-slate-600 text-sm font-medium">{p.fromPriceDisplay}</p>
+                          <span className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold text-white bg-prg-red group-hover:bg-prg-red-dark transition-colors shadow-sm">
+                            View &amp; book
+                            <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </span>
+                        </div>
                       </div>
                     </>
                   );

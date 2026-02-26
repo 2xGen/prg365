@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 const DEFAULT_OG_IMAGE =
-  "https://soaacpusdhyxwucjhhpy.supabase.co/storage/v1/object/public/aru365/Prg365.png";
+  "https://soaacpusdhyxwucjhhpy.supabase.co/storage/v1/object/public/aru365/best%20tours%20in%20prague.png";
 
 export const metadata: Metadata = {
   title: "2xGen LLC – Next-gen digital platforms",

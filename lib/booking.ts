@@ -24,7 +24,7 @@ export function getBookToursUrl(): string {
   return VIATOR_PRAGUE_URL;
 }
 
-/** URL for "See options & book" when no specific product (category/destination page). */
+/** URL for "View & book" when no specific product (category/destination page). */
 export function getCategoryBookUrl(_categorySlug?: string): string {
   return VIATOR_PRAGUE_URL;
 }

@@ -10,10 +10,10 @@ const config: Config = {
     extend: {
       colors: {
         prg: {
-          red: "#D7141A",
-          blue: "#11457E",
-          "red-dark": "#b31016",
-          "blue-dark": "#0d3560",
+          red: "#ea580c",
+          blue: "#0d9488",
+          "red-dark": "#c2410c",
+          "blue-dark": "#0f766e",
         },
       },
       fontFamily: {

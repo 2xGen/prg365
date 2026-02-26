@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-  /* Czech flag colors */
-  --prg-red: #D7141A;
-  --prg-blue: #11457E;
-  --prg-red-dark: #b31016;
-  --prg-blue-dark: #0d3560;
+  /* Tours & excursions – positive teal + warm amber */
+  --prg-red: #ea580c;
+  --prg-blue: #0d9488;
+  --prg-red-dark: #c2410c;
+  --prg-blue-dark: #0f766e;
 }
 
 html {

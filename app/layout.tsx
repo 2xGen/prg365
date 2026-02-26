@@ -29,7 +29,7 @@ const playfair = Playfair_Display({
 
 const SITE_URL = "https://prg365.com";
 const DEFAULT_OG_IMAGE =
-  "https://soaacpusdhyxwucjhhpy.supabase.co/storage/v1/object/public/aru365/Prg365.png";
+  "https://soaacpusdhyxwucjhhpy.supabase.co/storage/v1/object/public/aru365/best%20tours%20in%20prague.png";
 const defaultTitle = "Prg365 – Book Best Tours in Prague | Walking, Castle, Beer & Day Trips";
 const defaultDescription =
   "Prague's dedicated platform for booking the best tours and experiences. Find, compare, and book walking tours, castle visits, beer tours, day trips, and more.";

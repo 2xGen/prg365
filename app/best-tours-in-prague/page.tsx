@@ -15,7 +15,7 @@ import type { Metadata } from "next";
 
 const SITE_URL = "https://prg365.com";
 const DEFAULT_OG_IMAGE =
-  "https://soaacpusdhyxwucjhhpy.supabase.co/storage/v1/object/public/aru365/Prg365.png";
+  "https://soaacpusdhyxwucjhhpy.supabase.co/storage/v1/object/public/aru365/best%20tours%20in%20prague.png";
 
 export const metadata: Metadata = {
   title: "Find & Book Best Tours in Prague | Prg365",
@@ -153,13 +153,15 @@ export default async function BestToursPage() {
                       <h3 className="font-display font-bold text-lg text-slate-900 mt-1 group-hover:text-prg-red transition-colors" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
                         {product.title}
                       </h3>
-                      <p className="mt-2 text-slate-500 text-sm">{product.fromPriceDisplay}</p>
-                      <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-prg-red">
-                        See options &amp; book
-                        <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </span>
+                      <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
+                        <p className="text-slate-600 text-sm font-medium">{product.fromPriceDisplay}</p>
+                        <span className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-prg-red group-hover:bg-prg-red-dark transition-colors shadow-sm">
+                          View &amp; book
+                          <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </span>
+                      </div>
                     </>
                   );
                   const cardClassName = "group flex flex-col rounded-2xl border-2 border-prg-red/20 bg-white p-6 text-left transition-all duration-300 hover:border-prg-red hover:shadow-xl hover:shadow-prg-red/10 hover:-translate-y-1";
@@ -199,12 +201,14 @@ export default async function BestToursPage() {
                   <p className="mt-2 text-slate-600 text-sm leading-relaxed flex-grow">
                     {p.description}
                   </p>
-                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-prg-blue">
-                    See options &amp; book
-                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </span>
+                  <div className="mt-4 flex flex-wrap items-center justify-end">
+                    <span className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-prg-blue group-hover:bg-prg-blue-dark transition-colors shadow-sm">
+                      View &amp; book
+                      <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  </div>
                 </Link>
               ))}
             </div>
