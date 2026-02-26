@@ -301,9 +301,7 @@ const staticByCode: Record<
   "63851P18": { title: "Evening eco cruise with a glass of Prosecco", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
   // Food tours in Prague – fallback when no generated snapshot
   "7812P36": { title: "Secret Food Tours Prague Malá Strana", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
-  "176832P1": { title: "Prague Foodie Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
   "441609P4": { title: "Local Prague Food Tour in secrets HIDDEN GEMS Small Groups", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
-  "20624P1": { title: "Guided Prague City Food Tasting Walking Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
   "299238P6": { title: "Good Evening Old Town Food Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
   "20624P2": { title: "Eating Prague by Night Drinks and Food Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
   "169084P1": { title: "Delicious Food Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
@@ -312,7 +310,6 @@ const staticByCode: Record<
   "24380P284": { title: "Prague's Favorite Food Private Small Group Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
   // Jewish heritage tours in Prague – fallback when no generated snapshot
   "9396P2": { title: "Prague Jewish Quarter and Synagogue Walking Tour with admission tickets", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
-  "184581P1": { title: "Really Small Group Max 6 People Prague Old Town and Jewish Quarter Walking Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
   "9396P10": { title: "Prague Old Town and Jewish Quarter 90 minutes Guided Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
   "9396P18": { title: "Prague Jewish Town Admission Ticket with introduction", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
   "110804P247": { title: "Prague's Jewish Quarter Meander through its storied streets on an audio walk", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
@@ -326,7 +323,6 @@ const staticByCode: Record<
   "36131P1": { title: "PRAGUE BY NIGHT walking tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
   "9241P1": { title: "Prague Old Town Mystery Walking Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
   "7434P6": { title: "Prague Ghosts and Legends of Old Town Walking Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
-  "52397P1": { title: "Prague Oldtown and Medieval Underground and Dungeon Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
   "435382P8": { title: "Prague Night Combo Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
   "435382P5": { title: "Prague in Night Trike Group Tour Live Guided", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
   "5557409P6": { title: "Where Actual Czechs Drink Beer A Short Tour and Beer Experience", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
@@ -342,7 +338,6 @@ const staticByCode: Record<
   "26685P41": { title: "Prague Private Boat Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
   "26685P21": { title: "Prague Private Boat Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
   "64475P3": { title: "Best of Prague Private Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
-  "8576P1": { title: "Prague Full Day Private Walking Tour with Lunch and Boat Trip", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
   // Bike tours in Prague – fallback when no generated snapshot
   "8678P67": { title: "Bohemian Switzerland Boat n Bike Private Trip from Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
   "40610P13": { title: "Prague Mountain Biking Blast Through The Best Singletracks", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
