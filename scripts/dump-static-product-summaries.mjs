@@ -1,9 +1,13 @@
 /**
- * One-off: fetch all products from Viator API and write staticProductSummariesGenerated.json
- * so production can show real titles, prices, ratings, and images without calling the API.
+ * Fetch all product codes from data/pillarProducts.ts, call Viator products/bulk and
+ * availability/schedules/bulk once, then write data/staticProductSummariesGenerated.json.
+ * Production uses only this JSON (no live API calls).
  *
- * Run (from project root, with VIATOR_API_KEY in .env.local):
+ * Run from project root (with VIATOR_API_KEY in .env.local):
  *   node scripts/dump-static-product-summaries.mjs
+ *
+ * Then commit staticProductSummariesGenerated.json. Add new pillars/product codes to
+ * pillarProducts.ts first; the script picks up all quoted product codes automatically.
  *
  * Uses production API by default. For sandbox: VIATOR_API_BASE_URL=https://api.sandbox.viator.com/partner
  */
@@ -128,6 +132,13 @@ for (let i = 0; i < allCodes.length; i += BATCH) {
     const imageUrl = getFirstImageUrl(item.images);
     const policyText = String(item.cancellationPolicy?.type ?? "") + String(item.cancellationPolicy?.description ?? "");
     const freeCancellation = /free/i.test(policyText);
+    // Viator bulk response: supplier.name (e.g. "City Sightseeing Orlando")
+    const operator =
+      (item.supplier && typeof item.supplier.name === "string" && item.supplier.name.trim()) ||
+      item.supplierName ||
+      item.operator ||
+      item.brand?.name ||
+      null;
     out[item.productCode] = {
       title: item.title ?? "Tour",
       fromPriceDisplay,
@@ -136,6 +147,7 @@ for (let i = 0; i < allCodes.length; i += BATCH) {
       imageUrl: imageUrl || null,
       freeCancellation,
       productUrl: item.productUrl || null,
+      ...(operator && { operator: String(operator).trim() }),
     };
   }
   console.log("Fetched batch", Math.floor(i / BATCH) + 1, "/", Math.ceil(allCodes.length / BATCH));

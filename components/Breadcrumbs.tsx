@@ -10,7 +10,7 @@ interface BreadcrumbsProps {
   baseUrl?: string;
 }
 
-export function Breadcrumbs({ items, baseUrl = "https://aru365.com" }: BreadcrumbsProps) {
+export function Breadcrumbs({ items, baseUrl = "https://prg365.com" }: BreadcrumbsProps) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

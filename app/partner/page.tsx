@@ -36,7 +36,7 @@ export default function PartnerPage() {
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
               <a
                 href="mailto:matthijs@2xgen.com"
-                className="inline-flex items-center gap-3 px-6 py-4 rounded-xl bg-slate-100 hover:bg-aru-cyan/10 text-slate-800 hover:text-aru-cyan font-medium transition-colors border border-slate-200 hover:border-aru-cyan/30"
+                className="inline-flex items-center gap-3 px-6 py-4 rounded-xl bg-slate-100 hover:bg-prg-blue/10 text-slate-800 hover:text-prg-blue font-medium transition-colors border border-slate-200 hover:border-prg-blue/30"
               >
                 <svg className="w-6 h-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
@@ -66,7 +66,7 @@ export default function PartnerPage() {
             </p>
 
             <p className="mt-6">
-              <Link href="/" className="text-aru-cyan hover:text-aru-cyan-dark font-medium">
+              <Link href="/" className="text-prg-blue hover:text-prg-blue-dark font-medium">
                 ← Back to home
               </Link>
             </p>

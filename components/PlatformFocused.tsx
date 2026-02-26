@@ -2,13 +2,13 @@
 
 const features = [
   {
-    title: "Only Aruba",
-    body: "A specialized platform for tours and excursions in Aruba — not a general travel directory.",
+    title: "Only Prague",
+    body: "A specialized platform for tours and excursions in Prague — not a general travel directory.",
     icon: "pin",
   },
   {
     title: "Trusted resource",
-    body: "A structured, easy-to-use place to explore and compare Aruba tours, built for real travelers.",
+    body: "A structured, easy-to-use place to explore and compare Prague tours, built for real travelers.",
     icon: "check",
   },
   {
@@ -37,7 +37,7 @@ export function PlatformFocused() {
           className="font-display font-bold text-3xl sm:text-4xl text-slate-900 text-center mb-14"
           style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}
         >
-          A platform <span className="text-aru-orange">focused</span> on Aruba tours
+          A platform <span className="text-prg-red">focused</span> on Prague tours
         </h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {features.map((f) => (
@@ -45,7 +45,7 @@ export function PlatformFocused() {
               key={f.title}
               className="rounded-2xl border-2 border-slate-200 bg-slate-50/50 p-8 text-center transition-all duration-300 hover:border-aru-orange/50 hover:bg-orange-50/30 hover:shadow-lg"
             >
-              <span className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-aru-orange/10 text-aru-orange mb-5">
+              <span className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-aru-orange/10 text-prg-red mb-5">
                 <FeatureIcon icon={f.icon} />
               </span>
               <h3 className="font-display font-semibold text-lg text-slate-900 mb-2" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>{f.title}</h3>

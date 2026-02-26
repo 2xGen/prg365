@@ -1,16 +1,16 @@
 "use client";
 
 const guides = [
-  { name: "Best Tours in Aruba", icon: "chart" },
-  { name: "Best Snorkeling Tours in Aruba", icon: "mask" },
-  { name: "Best ATV Tours in Aruba", icon: "jeep" },
-  { name: "Best Sunset Cruises in Aruba", icon: "sun" },
+  { name: "Best Tours in Prague", icon: "chart" },
+  { name: "Best Walking Tours in Prague", icon: "mask" },
+  { name: "Best Castle Tours in Prague", icon: "jeep" },
+  { name: "Best Beer Tours in Prague", icon: "sun" },
   { name: "Private vs Group Tours", icon: "scale" },
-  { name: "Top Things to Do in Aruba", icon: "list" },
+  { name: "Top Things to Do in Prague", icon: "list" },
 ];
 
 function GuideIcon({ icon }: { icon: string }) {
-  const c = "w-5 h-5 text-aru-cyan";
+  const c = "w-5 h-5 text-prg-blue";
   if (icon === "chart") return <svg className={c} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" /></svg>;
   if (icon === "mask") return <svg className={c} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>;
   if (icon === "jeep") return <svg className={c} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M8 7h8m-8 4h8m-4 2v6m-3-6v6h6v-6m4 0v6h2v-4a2 2 0 00-2-2h-2v6" /><path strokeLinecap="round" strokeLinejoin="round" d="M4 10V8a2 2 0 012-2h12a2 2 0 012 2v2M4 10h16v8H4v-8z" /></svg>;
@@ -32,7 +32,7 @@ export function ComparisonsGuides() {
             className="font-display font-bold text-3xl sm:text-4xl text-slate-900"
             style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}
           >
-            Smart <span className="text-aru-cyan">comparisons</span> &amp; guides
+            Smart <span className="text-prg-blue">comparisons</span> &amp; guides
           </h2>
           <p className="mt-4 text-slate-600 text-lg">
             In-depth guides to help you choose the right experience for your style, group, and budget.
@@ -44,7 +44,7 @@ export function ComparisonsGuides() {
               key={g.name}
               className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:border-aru-cyan/30 hover:-translate-y-0.5"
             >
-              <span className="flex-shrink-0 w-11 h-11 rounded-xl bg-aru-cyan/10 text-aru-cyan flex items-center justify-center">
+              <span className="flex-shrink-0 w-11 h-11 rounded-xl bg-aru-cyan/10 text-prg-blue flex items-center justify-center">
                 <GuideIcon icon={g.icon} />
               </span>
               <span className="font-medium text-slate-800">{g.name}</span>

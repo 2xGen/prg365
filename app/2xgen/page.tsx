@@ -2,18 +2,24 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 const DEFAULT_OG_IMAGE =
-  "https://soaacpusdhyxwucjhhpy.supabase.co/storage/v1/object/public/aru365/aru365%20tours%20and%20excursions%20in%20aruba.png";
+  "https://soaacpusdhyxwucjhhpy.supabase.co/storage/v1/object/public/aru365/Prg365.png";
 
 export const metadata: Metadata = {
   title: "2xGen LLC – Next-gen digital platforms",
   description:
-    "2xGen builds and operates digital platforms: TopTours.ai, ArubaBuddies, FactuurBaas, OneHappyFinance, AruList, and more.",
+    "2xGen builds and operates digital platforms: Prg365, TopTours.ai, ArubaBuddies, FactuurBaas, OneHappyFinance, AruList, and more.",
   openGraph: {
-    images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: "Aru365 – Tours and excursions in Aruba" }],
+    images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: "Prg365 – Tours and experiences in Prague" }],
   },
 };
 
 const platforms = [
+  {
+    name: "Aru365.com",
+    description: "Find the best tours and activities in Aruba",
+    url: "https://aru365.com",
+    domain: "aru365.com",
+  },
   {
     name: "TopTours.ai",
     description: "AI-powered discovery for global travel experiences",
@@ -71,12 +77,12 @@ export default function TwoXGenPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-slate-600 hover:text-aru-orange transition-colors text-sm font-medium"
+            className="inline-flex items-center gap-2 text-slate-600 hover:text-prg-red transition-colors text-sm font-medium"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            Back to Aru365
+            Back to Prg365
           </Link>
         </div>
       </div>
@@ -85,7 +91,7 @@ export default function TwoXGenPage() {
           className="font-display font-bold text-4xl sm:text-5xl text-slate-900 mb-6"
           style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}
         >
-          <span className="text-aru-orange">2x</span>Gen
+          <span className="text-prg-red">2x</span>Gen
         </h1>
         <p className="text-lg text-slate-600 leading-relaxed mb-12">
           2xGen builds and operates digital platforms that combine strategic positioning, scalable architecture, and measurable impact.
@@ -102,7 +108,7 @@ export default function TwoXGenPage() {
                 href={p.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-aru-cyan font-medium hover:text-aru-cyan-dark transition-colors"
+                className="inline-flex items-center gap-2 text-prg-blue font-medium hover:text-prg-blue-dark transition-colors"
               >
                 Visit {p.name}
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

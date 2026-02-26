@@ -43,11 +43,11 @@ function FaqAccordion({ faqs }: { faqs: { question: string; answer: string }[] }
       {faqs.map((faq, i) => (
         <details
           key={i}
-          className="group rounded-2xl border border-slate-200 bg-white overflow-hidden transition-all duration-200 hover:border-aru-cyan/50 hover:shadow-md open:border-aru-cyan open:shadow-md"
+          className="group rounded-2xl border border-slate-200 bg-white overflow-hidden transition-all duration-200 hover:border-prg-blue/50 hover:shadow-md open:border-prg-blue open:shadow-md"
         >
           <summary className="px-6 py-5 font-semibold text-slate-900 cursor-pointer list-none flex justify-between items-center gap-4">
             <span className="pr-2">{faq.question}</span>
-            <span className="shrink-0 w-11 h-11 rounded-xl bg-slate-100 text-aru-cyan flex items-center justify-center group-open:bg-aru-cyan group-open:text-white transition-all duration-200">
+            <span className="shrink-0 w-11 h-11 rounded-xl bg-slate-100 text-prg-blue flex items-center justify-center group-open:bg-prg-blue group-open:text-white transition-all duration-200">
               <svg className="w-5 h-5 group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
@@ -83,7 +83,7 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
           <Breadcrumbs
             items={[
               { label: "Home", href: "/" },
-              { label: "Best tours in Aruba", href: "/best-tours-in-aruba" },
+              { label: "Best tours in Prague", href: "/best-tours-in-prague" },
               { label: pillar.title },
             ]}
           />
@@ -91,15 +91,15 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
       </div>
 
       {/* Hero – light, spacious, with cyan tint */}
-      <div className="relative bg-aru-cyan/5 overflow-hidden border-b border-aru-cyan/10">
+      <div className="relative bg-prg-blue/5 overflow-hidden border-b border-prg-blue/10">
         <div className="absolute inset-0 bg-dots-subtle pointer-events-none" aria-hidden />
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
           <div className="max-w-3xl">
-            <p className="text-aru-cyan font-medium text-sm uppercase tracking-widest">
-              Tours in Aruba
+            <p className="text-prg-blue font-medium text-sm uppercase tracking-widest">
+              Tours in Prague
             </p>
             <div className="mt-4 flex flex-col sm:flex-row sm:items-start gap-8">
-              <span className="flex-shrink-0 w-20 h-20 rounded-2xl bg-white border-2 border-aru-cyan/20 text-aru-cyan flex items-center justify-center shadow-md shadow-aru-cyan/10">
+              <span className="flex-shrink-0 w-20 h-20 rounded-2xl bg-white border-2 border-prg-blue/20 text-prg-blue flex items-center justify-center shadow-md shadow-prg-blue/10">
                 <CategoryIcon slug={pillar.slug} className="w-10 h-10" />
               </span>
               <div className="min-w-0">
@@ -114,10 +114,10 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
                 </p>
                 <div className="mt-6 flex flex-wrap items-center gap-4">
                   <Link
-                    href="/best-tours-in-aruba"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-aru-cyan hover:text-aru-cyan-dark bg-aru-cyan/5 hover:bg-aru-cyan/10 transition-colors"
+                    href="/best-tours-in-prague"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-prg-blue hover:text-prg-blue-dark bg-prg-blue/5 hover:bg-prg-blue/10 transition-colors"
                   >
-                    View all tours in Aruba
+                    View all tours in Prague
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                   </Link>
                 </div>
@@ -128,10 +128,10 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
       </div>
 
       {/* Popular choices – tour cards with book CTA */}
-      <div className="bg-aru-orange/5 py-14 lg:py-20 border-y border-aru-orange/10">
+      <div className="bg-prg-red/5 py-14 lg:py-20 border-y border-prg-red/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <section aria-labelledby="picks-heading">
-            <p className="text-sm font-medium text-aru-orange uppercase tracking-wider">Top picks</p>
+            <p className="text-sm font-medium text-prg-red uppercase tracking-wider">Top picks</p>
             <h2 id="picks-heading" className="font-display font-bold text-2xl text-slate-900 mt-1 mb-8" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
               Popular choices — see options &amp; book
             </h2>
@@ -140,10 +140,10 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
                 ? topPicks.map((p) => {
                     const listing = categorySlugsWithListings.includes(pillar.slug) ? getListingByProductCode(pillar.slug, p.productCode) : null;
                     const cardHref = listing ? `/${pillar.slug}/${listing.slug}` : p.productUrl;
-                    const cardClassName = "group flex flex-col rounded-2xl border-2 border-aru-orange/20 bg-white overflow-hidden text-left transition-all duration-300 hover:border-aru-orange hover:shadow-xl hover:shadow-aru-orange/10 hover:-translate-y-1";
+                    const cardClassName = "group flex flex-col rounded-2xl border-2 border-prg-red/20 bg-white overflow-hidden text-left transition-all duration-300 hover:border-prg-red hover:shadow-xl hover:shadow-prg-red/10 hover:-translate-y-1";
                     const cardContent = (
                       <>
-                        <div className="aspect-[16/10] w-full overflow-hidden bg-gradient-to-br from-aru-cyan/20 to-aru-orange/20">
+                        <div className="aspect-[16/10] w-full overflow-hidden bg-gradient-to-br from-prg-blue/20 to-prg-red/20">
                           {p.imageUrl ? (
                             <img src={p.imageUrl} alt="" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300" />
                           ) : (
@@ -155,7 +155,7 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
                           )}
                         </div>
                         <div className="p-5 flex flex-col flex-1">
-                          <h3 className="font-display font-bold text-lg text-slate-900 group-hover:text-aru-orange transition-colors line-clamp-2" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
+                          <h3 className="font-display font-bold text-lg text-slate-900 group-hover:text-prg-red transition-colors line-clamp-2" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
                             {p.title}
                           </h3>
                           <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
@@ -176,7 +176,7 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
                           {p.freeCancellation && (
                             <p className="mt-1 text-emerald-600 text-xs font-medium">Free cancellation</p>
                           )}
-                          <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-aru-orange">
+                          <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-prg-red">
                             {listing ? "View details & book" : "View full details &amp; book"}
                             <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -201,13 +201,13 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
                       href={getCategoryBookUrl(pillar.slug)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex flex-col rounded-2xl border-2 border-aru-orange/20 bg-white p-6 text-left transition-all duration-300 hover:border-aru-orange hover:shadow-xl hover:shadow-aru-orange/10 hover:-translate-y-1"
+                      className="group flex flex-col rounded-2xl border-2 border-prg-red/20 bg-white p-6 text-left transition-all duration-300 hover:border-prg-red hover:shadow-xl hover:shadow-prg-red/10 hover:-translate-y-1"
                     >
-                      <h3 className="font-display font-bold text-lg text-slate-900 group-hover:text-aru-orange transition-colors" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
+                      <h3 className="font-display font-bold text-lg text-slate-900 group-hover:text-prg-red transition-colors" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
                         {tour.title}
                       </h3>
                       <p className="mt-2 text-slate-500 text-sm">{tour.fromPriceLabel ?? `From $${tour.fromPrice}`}</p>
-                      <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-aru-orange">
+                      <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-prg-red">
                         See options &amp; book
                         <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -221,7 +221,7 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
           {/* More options – smaller cards (products 5–10 from same bulk call) */}
           {moreOptions.length > 0 && (
             <section aria-labelledby="more-options-heading" className="mt-14">
-              <p className="text-sm font-medium text-aru-orange uppercase tracking-wider">More options</p>
+              <p className="text-sm font-medium text-prg-red uppercase tracking-wider">More options</p>
               <h2 id="more-options-heading" className="font-display font-bold text-xl text-slate-900 mt-1 mb-6" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
                 More {pillar.title.toLowerCase().replace(/ in aruba$/, "")}
               </h2>
@@ -229,10 +229,10 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
                 {moreOptions.map((p) => {
                   const listing = categorySlugsWithListings.includes(pillar.slug) ? getListingByProductCode(pillar.slug, p.productCode) : null;
                   const cardHref = listing ? `/${pillar.slug}/${listing.slug}` : p.productUrl;
-                  const cardClassName = "group flex flex-col rounded-xl border border-aru-orange/20 bg-white overflow-hidden text-left transition-all duration-200 hover:border-aru-orange hover:shadow-lg hover:shadow-aru-orange/10";
+                  const cardClassName = "group flex flex-col rounded-xl border border-prg-red/20 bg-white overflow-hidden text-left transition-all duration-200 hover:border-prg-red hover:shadow-lg hover:shadow-prg-red/10";
                   const cardContent = (
                     <>
-                      <div className="aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-aru-cyan/10 to-aru-orange/10">
+                      <div className="aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-prg-blue/10 to-prg-red/10">
                         {p.imageUrl ? (
                           <img src={p.imageUrl} alt="" className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300" />
                         ) : (
@@ -244,7 +244,7 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
                         )}
                       </div>
                       <div className="p-4 flex flex-col flex-1">
-                        <h3 className="font-display font-bold text-base text-slate-900 group-hover:text-aru-orange transition-colors line-clamp-2" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
+                        <h3 className="font-display font-bold text-base text-slate-900 group-hover:text-prg-red transition-colors line-clamp-2" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
                           {p.title}
                         </h3>
                         <div className="mt-1.5 flex flex-wrap items-center gap-x-1.5 text-xs text-slate-500">
@@ -253,7 +253,7 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
                           {p.reviewCount > 0 && <span>{p.reviewCount.toLocaleString("en-US")} reviews</span>}
                         </div>
                         <p className="mt-1 text-slate-600 text-sm font-medium">{p.fromPriceDisplay}</p>
-                        <span className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-aru-orange">
+                        <span className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-prg-red">
                           View details &amp; book
                           <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -279,10 +279,10 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
       </div>
 
       {/* Guides – specific guides to narrow down options */}
-      <div className="bg-aru-cyan/5 py-14 lg:py-20 border-b border-aru-cyan/10">
+      <div className="bg-prg-blue/5 py-14 lg:py-20 border-b border-prg-blue/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <section aria-labelledby="explore-heading">
-            <p className="text-sm font-medium text-aru-cyan uppercase tracking-wider">Guides</p>
+            <p className="text-sm font-medium text-prg-blue uppercase tracking-wider">Guides</p>
             <h2 id="explore-heading" className="font-display font-bold text-2xl text-slate-900 mt-1 mb-2" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
               Find the right option for you
             </h2>
@@ -294,10 +294,10 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
                 <Link
                   key={i}
                   href={sub.href}
-                  className="group flex items-center justify-between gap-4 rounded-2xl border-2 border-aru-cyan/20 bg-white px-6 py-5 font-medium text-slate-800 transition-all duration-200 hover:border-aru-cyan hover:shadow-lg hover:shadow-aru-cyan/10 hover:-translate-y-0.5"
+                  className="group flex items-center justify-between gap-4 rounded-2xl border-2 border-prg-blue/20 bg-white px-6 py-5 font-medium text-slate-800 transition-all duration-200 hover:border-prg-blue hover:shadow-lg hover:shadow-prg-blue/10 hover:-translate-y-0.5"
                 >
                   <span>{sub.label}</span>
-                  <span className="shrink-0 w-10 h-10 rounded-xl bg-aru-cyan/10 text-aru-cyan group-hover:bg-aru-cyan group-hover:text-white flex items-center justify-center transition-colors">
+                  <span className="shrink-0 w-10 h-10 rounded-xl bg-prg-blue/10 text-prg-blue group-hover:bg-prg-blue group-hover:text-white flex items-center justify-center transition-colors">
                     <svg className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                   </span>
                 </Link>
@@ -311,12 +311,12 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
       <div className="bg-white py-14 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <section>
-            <div className="rounded-2xl border-l-4 border-aru-cyan bg-aru-cyan/5 p-8 lg:p-10">
+            <div className="rounded-2xl border-l-4 border-prg-blue bg-prg-blue/5 p-8 lg:p-10">
               <h2 className="font-display font-bold text-xl text-slate-900 mb-4" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
-                About {pillar.title.replace(/ in Aruba$/, "")}
+                About {pillar.title.replace(/ in Prague$/, "")}
               </h2>
               <p className="text-slate-600 leading-relaxed">
-                {pillar.about ?? "Aruba offers a wide range of options for travelers. This page will be updated with detailed, helpful content to help you choose the right experience. We focus on clear comparisons and honest guidance so you can book with confidence."}
+                {pillar.about ?? "Prague offers a wide range of options for travelers. This page will be updated with detailed, helpful content to help you choose the right experience. We focus on clear comparisons and honest guidance so you can book with confidence."}
               </p>
             </div>
           </section>
@@ -346,9 +346,9 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
               </section>
             )}
             {pillar.whatToExpect && pillar.whatToExpect.length > 0 && (
-              <section className="rounded-2xl border-2 border-aru-cyan/30 bg-white p-6 lg:p-8 shadow-sm">
+              <section className="rounded-2xl border-2 border-prg-blue/30 bg-white p-6 lg:p-8 shadow-sm">
                 <h2 className="font-display font-bold text-lg text-slate-900 mb-4 flex items-center gap-2" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
-                  <span className="text-aru-cyan" aria-hidden>
+                  <span className="text-prg-blue" aria-hidden>
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
                   </span>
                   What to expect
@@ -356,7 +356,7 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
                 <ol className="space-y-3 text-slate-600 leading-relaxed list-none">
                   {pillar.whatToExpect.map((step, i) => (
                     <li key={i} className="flex gap-3">
-                      <span className="shrink-0 font-semibold text-aru-cyan w-6">{i + 1}.</span>
+                      <span className="shrink-0 font-semibold text-prg-blue w-6">{i + 1}.</span>
                       <span>{step}</span>
                     </li>
                   ))}
@@ -386,9 +386,9 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
               </section>
             )}
             {pillar.highlights && pillar.highlights.length > 0 && (
-              <section className="rounded-2xl border-2 border-aru-orange/20 bg-white p-6 lg:p-8 shadow-sm lg:col-span-2">
+              <section className="rounded-2xl border-2 border-prg-red/20 bg-white p-6 lg:p-8 shadow-sm lg:col-span-2">
                 <h2 className="font-display font-bold text-lg text-slate-900 mb-4 flex items-center gap-2" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
-                  <span className="text-aru-orange" aria-hidden>
+                  <span className="text-prg-red" aria-hidden>
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                   </span>
                   Highlights
@@ -396,7 +396,7 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
                 <ul className="flex flex-wrap gap-2">
                   {pillar.highlights.map((h, i) => (
                     <li key={i}>
-                      <span className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-aru-orange/10 text-aru-orange border border-aru-orange/20">
+                      <span className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-prg-red/10 text-prg-red border border-prg-red/20">
                         {h}
                       </span>
                     </li>
@@ -409,10 +409,10 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
       </div>
 
       {/* FAQ */}
-      <div className="bg-aru-cyan/5 py-14 lg:py-20 border-y border-aru-cyan/10">
+      <div className="bg-prg-blue/5 py-14 lg:py-20 border-y border-prg-blue/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <section aria-labelledby="faq-heading">
-            <p className="text-sm font-medium text-aru-cyan uppercase tracking-wider">Help</p>
+            <p className="text-sm font-medium text-prg-blue uppercase tracking-wider">Help</p>
             <h2 id="faq-heading" className="font-display font-bold text-2xl text-slate-900 mt-1 mb-8" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
               Frequently asked questions
             </h2>
@@ -422,10 +422,10 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
       </div>
 
       {/* Related categories – card style */}
-      <div className="bg-aru-orange/5 py-14 lg:py-20 border-t-2 border-aru-orange/20">
+      <div className="bg-prg-red/5 py-14 lg:py-20 border-t-2 border-prg-red/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <section aria-labelledby="related-heading">
-            <p className="text-sm font-medium text-aru-orange uppercase tracking-wider">More to explore</p>
+            <p className="text-sm font-medium text-prg-red uppercase tracking-wider">More to explore</p>
             <h2 id="related-heading" className="font-display font-bold text-2xl text-slate-900 mt-1 mb-8" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
               Related categories
             </h2>
@@ -434,9 +434,9 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
                 <Link
                   key={p.slug}
                   href={`/${p.slug}`}
-                  className="group flex items-center gap-4 rounded-2xl border-2 border-aru-orange/20 bg-white px-5 py-4 font-medium text-slate-800 transition-all duration-200 hover:border-aru-orange hover:bg-aru-orange hover:text-white hover:shadow-lg hover:shadow-aru-orange/20"
+                  className="group flex items-center gap-4 rounded-2xl border-2 border-prg-red/20 bg-white px-5 py-4 font-medium text-slate-800 transition-all duration-200 hover:border-prg-red hover:bg-prg-red hover:text-white hover:shadow-lg hover:shadow-prg-red/20"
                 >
-                  <span className="flex-shrink-0 w-12 h-12 rounded-xl bg-aru-orange/10 border border-aru-orange/20 text-aru-orange flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                  <span className="flex-shrink-0 w-12 h-12 rounded-xl bg-prg-red/10 border border-prg-red/20 text-prg-red flex items-center justify-center group-hover:bg-white/20 transition-colors">
                     <CategoryIcon slug={p.slug} className="w-6 h-6" />
                   </span>
                   <span className="min-w-0 flex-1 group-hover:text-white transition-colors">{p.title}</span>
@@ -445,10 +445,10 @@ export function PillarTemplate({ pillar, featuredProducts }: PillarTemplateProps
               ))}
             </div>
             <Link
-              href="/best-tours-in-aruba"
-              className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-aru-orange hover:bg-aru-orange-dark transition-colors shadow-md hover:shadow-lg"
+              href="/best-tours-in-prague"
+              className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-prg-red hover:bg-prg-red-dark transition-colors shadow-md hover:shadow-lg"
             >
-              View all tours in Aruba
+              View all tours in Prague
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
             </Link>
           </section>

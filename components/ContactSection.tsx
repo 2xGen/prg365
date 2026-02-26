@@ -16,7 +16,7 @@ export function ContactSection() {
           Questions? <span className="text-aru-cyan">Get in touch</span>
         </h2>
         <p className="text-slate-600 text-center max-w-md mx-auto mb-12">
-          We're here to help you find the right tours and experiences in Aruba.
+          We're here to help you find the right tours and experiences in Prague.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-6 max-w-2xl mx-auto">
           <a

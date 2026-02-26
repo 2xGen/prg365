@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --aru-orange: #ff8c00;
-  --aru-cyan: #00ced1;
-  --aru-orange-dark: #e67d00;
-  --aru-cyan-dark: #00b4b7;
+  /* Czech flag colors */
+  --prg-red: #D7141A;
+  --prg-blue: #11457E;
+  --prg-red-dark: #b31016;
+  --prg-blue-dark: #0d3560;
 }
 
 html {
@@ -46,5 +47,5 @@ body {
 input:focus,
 textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 2px white, 0 0 0 4px var(--aru-cyan);
+  box-shadow: 0 0 0 2px white, 0 0 0 4px var(--prg-blue);
 }

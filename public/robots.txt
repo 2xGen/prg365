@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow:
+
+Sitemap: https://prg365.com/sitemap.xml

@@ -10,7 +10,7 @@ export function Footer() {
   return (
     <footer className="bg-slate-900 text-slate-300 relative overflow-hidden">
       {/* Accent top border */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-aru-cyan/80 to-aru-orange/60" />
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-prg-blue/80 to-prg-red/60" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 relative">
         <div className="max-w-4xl mx-auto">
@@ -19,21 +19,21 @@ export function Footer() {
             <div>
               <Link
                 href="/"
-                className="font-display font-bold text-2xl text-white block hover:text-aru-cyan transition-colors duration-200 group"
+                className="font-display font-bold text-2xl text-white block hover:text-prg-blue transition-colors duration-200 group"
                 style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}
               >
-                Aru365
-                <span className="block h-0.5 w-12 mx-auto mt-1.5 rounded-full bg-aru-cyan/60 group-hover:bg-aru-cyan group-hover:w-16 transition-all duration-200" />
+                Prg365
+                <span className="block h-0.5 w-12 mx-auto mt-1.5 rounded-full bg-prg-blue/60 group-hover:bg-prg-blue group-hover:w-16 transition-all duration-200" />
               </Link>
               <span className="text-slate-400 text-sm sm:text-base mt-3 block">
-                Everything Aruba. <span className="text-aru-cyan/90 font-medium">365 Days a Year.</span>
+                Everything Prague. <span className="text-prg-blue/90 font-medium">365 Days a Year.</span>
               </span>
             </div>
 
             {/* Categories */}
             <div className="w-full pt-6 border-t border-slate-700/80">
               <p className="text-slate-400 text-sm font-medium mb-3 flex items-center justify-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-aru-cyan" aria-hidden />
+                <span className="w-1.5 h-1.5 rounded-full bg-prg-blue" aria-hidden />
                 Explore by category
               </p>
               <nav className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm" aria-label="Footer categories">
@@ -41,7 +41,7 @@ export function Footer() {
                   <Link
                     key={p.slug}
                     href={`/${p.slug}`}
-                    className="text-slate-400 hover:text-aru-cyan transition-colors py-0.5 border-b border-transparent hover:border-aru-cyan/50"
+                    className="text-slate-400 hover:text-prg-blue transition-colors py-0.5 border-b border-transparent hover:border-prg-blue/50"
                   >
                     {p.title}
                   </Link>
@@ -54,20 +54,20 @@ export function Footer() {
               <nav className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm" aria-label="Footer legal and info">
                 <Link
                   href="/partner"
-                  className="text-slate-400 hover:text-aru-cyan px-3 py-1.5 rounded-lg hover:bg-aru-cyan/10 transition-colors"
+                  className="text-slate-400 hover:text-prg-blue px-3 py-1.5 rounded-lg hover:bg-prg-blue/10 transition-colors"
                 >
                   Partner with us
                 </Link>
                 <Link
                   href="/terms"
-                  className="text-slate-400 hover:text-aru-cyan px-3 py-1.5 rounded-lg hover:bg-aru-cyan/10 transition-colors"
+                  className="text-slate-400 hover:text-prg-blue px-3 py-1.5 rounded-lg hover:bg-prg-blue/10 transition-colors"
                 >
                   Terms &amp; Conditions
                 </Link>
                 <button
                   type="button"
                   onClick={openCookiePreferences}
-                  className="text-slate-400 hover:text-aru-cyan px-3 py-1.5 rounded-lg hover:bg-aru-cyan/10 transition-colors bg-transparent border-none cursor-pointer font-inherit text-left"
+                  className="text-slate-400 hover:text-prg-blue px-3 py-1.5 rounded-lg hover:bg-prg-blue/10 transition-colors bg-transparent border-none cursor-pointer font-inherit text-left"
                 >
                   Cookie preference
                 </button>
@@ -75,7 +75,7 @@ export function Footer() {
               <p className="text-slate-500 text-xs max-w-xl mx-auto leading-relaxed">
                 We are a Viator affiliate. We may earn a commission when you book through our links, at no extra cost
                 to you. We do not handle bookings; you book directly with Viator and the operator. See{" "}
-                <Link href="/terms" className="text-aru-cyan hover:text-aru-cyan-dark hover:underline transition-colors">
+                <Link href="/terms" className="text-prg-blue hover:text-prg-blue-dark hover:underline transition-colors">
                   Terms &amp; Conditions
                 </Link>
                 .
@@ -88,7 +88,7 @@ export function Footer() {
                 Owned and operated by{" "}
                 <Link
                   href="/2xgen"
-                  className="text-aru-cyan hover:text-white font-medium transition-colors underline underline-offset-2 decoration-aru-cyan/60 hover:decoration-aru-cyan"
+                  className="text-prg-blue hover:text-white font-medium transition-colors underline underline-offset-2 decoration-prg-blue/60 hover:decoration-prg-blue"
                 >
                   2xGen LLC
                 </Link>{" "}
@@ -99,7 +99,7 @@ export function Footer() {
             {/* Copyright */}
             <p className="text-slate-500 text-sm flex items-center gap-2">
               <span className="w-1 h-1 rounded-full bg-slate-600" aria-hidden />
-              © {new Date().getFullYear()} Aru365. All rights reserved.
+              © {new Date().getFullYear()} Prg365. All rights reserved.
             </p>
           </div>
         </div>

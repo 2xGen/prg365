@@ -4,15 +4,15 @@ const benefits = [
   {
     title: "SEO & Content Exposure",
     description:
-      "We create optimized tour category pages and comparison guides targeting high-intent searches like “best tours in Aruba,” “snorkeling tours,” “ATV tours Aruba,” and “sunset cruises Aruba.”",
+      "We create optimized tour category pages and comparison guides targeting high-intent searches like “best tours in Prague,” “snorkeling tours,” “castle tours Prague,” and “beer tours Prague.”",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
       </svg>
     ),
-    color: "text-aru-orange",
+    color: "text-prg-red",
     bg: "bg-amber-50",
-    border: "border-aru-orange/20",
+    border: "border-prg-red/20",
   },
   {
     title: "Strategic Placement",
@@ -23,9 +23,9 @@ const benefits = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l7.5-4.314m-7.5 4.314l7.5 4.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186m0 0l-7.5-4.314m7.5 4.314l-7.5-4.314" />
       </svg>
     ),
-    color: "text-aru-cyan",
+    color: "text-prg-blue",
     bg: "bg-cyan-50",
-    border: "border-aru-cyan/20",
+    border: "border-prg-blue/20",
   },
   {
     title: "Direct Booking Integration",
@@ -36,9 +36,9 @@ const benefits = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5" />
       </svg>
     ),
-    color: "text-aru-orange",
+    color: "text-prg-red",
     bg: "bg-amber-50",
-    border: "border-aru-orange/20",
+    border: "border-prg-red/20",
   },
   {
     title: "Email & Trip Planning Promotion",
@@ -49,9 +49,9 @@ const benefits = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
       </svg>
     ),
-    color: "text-aru-cyan",
+    color: "text-prg-blue",
     bg: "bg-cyan-50",
-    border: "border-aru-cyan/20",
+    border: "border-prg-blue/20",
   },
 ];
 
@@ -68,16 +68,16 @@ export function HowWePromote() {
           className="font-display font-bold text-3xl sm:text-4xl text-slate-900 text-center mb-2"
           style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}
         >
-          Partner <span className="text-aru-orange">With Us</span>
+          Partner <span className="text-prg-red">With Us</span>
         </h2>
         <h3 className="font-display font-semibold text-xl sm:text-2xl text-slate-800 text-center mb-4" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
           How We Promote Tour Businesses
         </h3>
         <p className="text-slate-600 text-center max-w-3xl mx-auto mb-4 text-lg leading-relaxed">
-          Aru365 is built on the success of <strong className="text-slate-800">ArubaBuddies</strong>. With 4+ years of experience and more than 10,000 monthly visitors, we understand what travelers search for—and what they book.
+          Prg365 is built to be the most trusted source for booking tours in Prague. We focus on clear comparisons and honest guidance so travelers find the right experience.
         </p>
         <p className="text-slate-600 text-center max-w-3xl mx-auto mb-14">
-          Aru365 is the next evolution: a platform fully focused on <strong className="text-slate-800">tours and excursions in Aruba</strong>.
+          Prg365 is a platform fully focused on <strong className="text-slate-800">tours and experiences in Prague</strong>.
         </p>
         <p className="text-slate-600 text-center max-w-2xl mx-auto mb-10 font-medium">
           Here’s how we help you get found and booked:

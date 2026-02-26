@@ -9,11 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        aru: {
-          orange: "#ff8c00",
-          cyan: "#00ced1",
-          "orange-dark": "#e67d00",
-          "cyan-dark": "#00b4b7",
+        prg: {
+          red: "#D7141A",
+          blue: "#11457E",
+          "red-dark": "#b31016",
+          "blue-dark": "#0d3560",
         },
       },
       fontFamily: {

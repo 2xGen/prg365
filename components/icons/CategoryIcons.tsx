@@ -114,19 +114,18 @@ export function IconFamily({ className = iconClass }: { className?: string }) {
 }
 
 const slugToIcon: Record<string, React.ComponentType<{ className?: string }>> = {
-  "catamaran-cruises-in-aruba": IconCatamaran,
-  "sunset-and-dinner-cruises-in-aruba": IconSunset,
-  "snorkeling-and-diving-in-aruba": IconSnorkel,
-  "atv-and-jeep-tours-in-aruba": IconJeep,
-  "island-sightseeing-tours-in-aruba": IconMap,
-  "private-and-luxury-tours-in-aruba": IconStar,
-  "romantic-experiences-in-aruba": IconHeart,
-  "horseback-riding-in-aruba": IconHorse,
-  "photoshoots-in-aruba": IconCamera,
-  "airport-transfers-in-aruba": IconCar,
-  "sea-glass-island-aruba": IconBeach,
-  "water-sports-and-rentals-in-aruba": IconWater,
-  "things-to-do-in-aruba-with-kids": IconFamily,
+  "walking-tours-in-prague": IconMap,
+  "castle-and-palace-tours-in-prague": IconStar,
+  "beer-tours-in-prague": IconStar,
+  "day-trips-from-prague": IconMap,
+  "river-cruises-in-prague": IconWater,
+  "food-tours-in-prague": IconStar,
+  "jewish-heritage-tours-in-prague": IconMap,
+  "night-tours-in-prague": IconSunset,
+  "private-tours-in-prague": IconStar,
+  "bike-tours-in-prague": IconMap,
+  "photography-tours-in-prague": IconCamera,
+  "cultural-experiences-in-prague": IconHeart,
 };
 
 export function CategoryIcon({ slug, className = iconClass }: { slug: string; className?: string }) {

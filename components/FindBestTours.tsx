@@ -1,15 +1,18 @@
 "use client";
 
 const categories = [
-  "Sunset Cruises in Aruba",
-  "Snorkeling Tours & Catamaran Trips",
-  "Turtle Swimming Tours",
-  "Seaglass Island Excursions",
-  "ATV Tours in Aruba",
-  "Jeep Safari Adventures",
-  "Private & Luxury Tours",
-  "Family-Friendly Excursions",
-  "Airport Transfers & Island Transportation",
+  "Walking Tours in Prague",
+  "Castle & Palace Tours",
+  "Beer Tours",
+  "Day Trips from Prague",
+  "River Cruises",
+  "Food Tours",
+  "Jewish Heritage Tours",
+  "Night Tours",
+  "Private Tours",
+  "Bike Tours",
+  "Photography Tours",
+  "Cultural Experiences",
 ];
 
 export function FindBestTours() {
@@ -25,13 +28,13 @@ export function FindBestTours() {
           className="font-display font-bold text-3xl sm:text-4xl text-slate-900 text-center mb-4"
           style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}
         >
-          Find the Best <span className="text-aru-orange">Tours</span> in Aruba
+          Find the Best <span className="text-prg-red">Tours</span> in Prague
         </h2>
         <p className="text-slate-600 text-center max-w-3xl mx-auto mb-12 text-lg leading-relaxed">
-          Whether you’re looking for snorkeling tours, sunset cruises, ATV adventures, private boat charters, turtle swimming experiences, or airport transfers, Aru365 will organize the island’s top experiences in a clear, easy-to-navigate structure.
+          Whether you’re looking for walking tours, castle visits, beer tours, day trips, river cruises, or food experiences, Prg365 will organize the island’s top experiences in a clear, easy-to-navigate structure.
         </p>
         <p className="text-slate-600 text-center max-w-3xl mx-auto mb-14">
-          Aruba offers some of the most diverse excursions in the Caribbean — from ocean adventures to off-road island exploration. Aru365 will feature curated categories including:
+          Prague offers diverse tours and experiences — from historic walks to beer culture and day trips. Prg365 features curated categories including:
         </p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
           {categories.map((name, i) => (

@@ -1,89 +1,77 @@
 /**
  * Unified tour listings module for categories with custom listing pages.
- * Aggregates catamaran, sunset, snorkeling, and ATV listings for routing and display.
  */
 import type { TourListing } from "./catamaranListings";
+import { pillars } from "./pillars";
 import {
-  catamaranCategorySlug,
-  catamaranListings,
-} from "./catamaranListings";
+  beerToursCategorySlug,
+  beerToursListings,
+} from "./beerToursListings";
 import {
-  sunsetCategorySlug,
-  sunsetListings,
-} from "./sunsetListings";
+  castleToursCategorySlug,
+  castleToursListings,
+} from "./castleToursListings";
 import {
-  snorkelingCategorySlug,
-  snorkelingListings,
-} from "./snorkelingListings";
+  dayTripsCategorySlug,
+  dayTripsListings,
+} from "./dayTripsListings";
 import {
-  atvCategorySlug,
-  atvListings,
-} from "./atvListings";
+  foodToursCategorySlug,
+  foodToursListings,
+} from "./foodToursListings";
 import {
-  islandSightseeingCategorySlug,
-  islandSightseeingListings,
-} from "./islandSightseeingListings";
+  jewishHeritageToursCategorySlug,
+  jewishHeritageToursListings,
+} from "./jewishHeritageToursListings";
 import {
-  privateLuxuryCategorySlug,
-  privateLuxuryListings,
-} from "./privateLuxuryListings";
+  nightToursCategorySlug,
+  nightToursListings,
+} from "./nightToursListings";
 import {
-  romanticExperiencesCategorySlug,
-  romanticExperiencesListings,
-} from "./romanticExperiencesListings";
+  bikeToursCategorySlug,
+  bikeToursListings,
+} from "./bikeToursListings";
 import {
-  horsebackRidingCategorySlug,
-  horsebackRidingListings,
-} from "./horsebackRidingListings";
+  culturalExperiencesCategorySlug,
+  culturalExperiencesListings,
+} from "./culturalExperiencesListings";
 import {
-  photoshootsCategorySlug,
-  photoshootsListings,
-} from "./photoshootsListings";
+  photographyToursCategorySlug,
+  photographyToursListings,
+} from "./photographyToursListings";
 import {
-  airportTransfersCategorySlug,
-  airportTransfersListings,
-} from "./airportTransfersListings";
+  privateToursCategorySlug,
+  privateToursListings,
+} from "./privateToursListings";
 import {
-  seaGlassCategorySlug,
-  seaGlassListings,
-} from "./seaGlassListings";
+  riverCruisesCategorySlug,
+  riverCruisesListings,
+} from "./riverCruisesListings";
 import {
-  waterSportsCategorySlug,
-  waterSportsListings,
-} from "./waterSportsListings";
+  walkingToursCategorySlug,
+  walkingToursListings,
+} from "./walkingToursListings";
 
 export type { TourListing };
 
 const listingMap: Record<string, TourListing[]> = {
-  [catamaranCategorySlug]: catamaranListings,
-  [sunsetCategorySlug]: sunsetListings,
-  [snorkelingCategorySlug]: snorkelingListings,
-  [atvCategorySlug]: atvListings,
-  [islandSightseeingCategorySlug]: islandSightseeingListings,
-  [privateLuxuryCategorySlug]: privateLuxuryListings,
-  [romanticExperiencesCategorySlug]: romanticExperiencesListings,
-  [horsebackRidingCategorySlug]: horsebackRidingListings,
-  [photoshootsCategorySlug]: photoshootsListings,
-  [airportTransfersCategorySlug]: airportTransfersListings,
-  [seaGlassCategorySlug]: seaGlassListings,
-  [waterSportsCategorySlug]: waterSportsListings,
+  ...Object.fromEntries(pillars.map((p) => [p.slug, [] as TourListing[]])),
+  [walkingToursCategorySlug]: walkingToursListings,
+  [castleToursCategorySlug]: castleToursListings,
+  [beerToursCategorySlug]: beerToursListings,
+  [dayTripsCategorySlug]: dayTripsListings,
+  [foodToursCategorySlug]: foodToursListings,
+  [jewishHeritageToursCategorySlug]: jewishHeritageToursListings,
+  [nightToursCategorySlug]: nightToursListings,
+  [bikeToursCategorySlug]: bikeToursListings,
+  [culturalExperiencesCategorySlug]: culturalExperiencesListings,
+  [photographyToursCategorySlug]: photographyToursListings,
+  [privateToursCategorySlug]: privateToursListings,
+  [riverCruisesCategorySlug]: riverCruisesListings,
 };
 
 /** Category slugs that have tour listing pages (for routing) */
-export const categorySlugsWithListings: string[] = [
-  catamaranCategorySlug,
-  sunsetCategorySlug,
-  snorkelingCategorySlug,
-  atvCategorySlug,
-  islandSightseeingCategorySlug,
-  privateLuxuryCategorySlug,
-  romanticExperiencesCategorySlug,
-  horsebackRidingCategorySlug,
-  photoshootsCategorySlug,
-  airportTransfersCategorySlug,
-  seaGlassCategorySlug,
-  waterSportsCategorySlug,
-];
+export const categorySlugsWithListings: string[] = pillars.map((p) => p.slug);
 
 /** Resolve a tour listing by category and tour slug; returns null if not found */
 export function getTourListing(

@@ -6,7 +6,7 @@ import {
 } from "@/data/listings";
 import { getGuideSlugsByCategory } from "@/data/guides";
 
-const SITE_URL = "https://aru365.com";
+const SITE_URL = "https://prg365.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = new Date();
@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: SITE_URL, lastModified: base, changeFrequency: "daily", priority: 1 },
     {
-      url: `${SITE_URL}/best-tours-in-aruba`,
+      url: `${SITE_URL}/best-tours-in-prague`,
       lastModified: base,
       changeFrequency: "daily",
       priority: 0.9,

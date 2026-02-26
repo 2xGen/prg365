@@ -50,7 +50,7 @@ export function GuideTemplate({
           <Breadcrumbs
             items={[
               { label: "Home", href: "/" },
-              { label: "Best tours in Aruba", href: "/best-tours-in-aruba" },
+              { label: "Best tours in Prague", href: "/best-tours-in-prague" },
               { label: categoryTitle, href: categoryHref },
               { label: guide.title },
             ]}
@@ -59,15 +59,15 @@ export function GuideTemplate({
       </div>
 
       {/* Hero – matches category page style */}
-      <div className="relative bg-aru-cyan/5 overflow-hidden border-b border-aru-cyan/10">
+      <div className="relative bg-prg-blue/5 overflow-hidden border-b border-prg-blue/10">
         <div className="absolute inset-0 bg-dots-subtle pointer-events-none" aria-hidden />
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
           <div className="max-w-3xl">
-            <p className="text-aru-cyan font-medium text-sm uppercase tracking-widest">
+            <p className="text-prg-blue font-medium text-sm uppercase tracking-widest">
               {categoryTitle}
             </p>
             <div className="mt-4 flex flex-col sm:flex-row sm:items-start gap-8">
-              <span className="flex-shrink-0 w-20 h-20 rounded-2xl bg-white border-2 border-aru-cyan/20 text-aru-cyan flex items-center justify-center shadow-md shadow-aru-cyan/10">
+              <span className="flex-shrink-0 w-20 h-20 rounded-2xl bg-white border-2 border-prg-blue/20 text-prg-blue flex items-center justify-center shadow-md shadow-prg-blue/10">
                 <CategoryIcon slug={categoryHref.replace(/^\//, "")} className="w-10 h-10" />
               </span>
               <div className="min-w-0">
@@ -83,7 +83,7 @@ export function GuideTemplate({
                 <div className="mt-6 flex flex-wrap items-center gap-4">
                   <Link
                     href={categoryHref}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-aru-cyan hover:text-aru-cyan-dark bg-aru-cyan/5 hover:bg-aru-cyan/10 transition-colors"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-prg-blue hover:text-prg-blue-dark bg-prg-blue/5 hover:bg-prg-blue/10 transition-colors"
                   >
                     Back to {categoryTitle}
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -98,10 +98,10 @@ export function GuideTemplate({
       </div>
 
       {/* Our picks */}
-      <div className="bg-aru-orange/5 py-14 lg:py-20 border-y border-aru-orange/10">
+      <div className="bg-prg-red/5 py-14 lg:py-20 border-y border-prg-red/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <section aria-labelledby="picks-heading">
-            <p className="text-sm font-medium text-aru-orange uppercase tracking-wider">Our picks</p>
+            <p className="text-sm font-medium text-prg-red uppercase tracking-wider">Our picks</p>
             <h2 id="picks-heading" className="font-display font-bold text-2xl text-slate-900 mt-1 mb-10" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
               Our best {guide.title.replace(/^Best\s+/i, "").replace(/s\s*$/, "").toLowerCase()} picks
             </h2>
@@ -110,10 +110,10 @@ export function GuideTemplate({
                 <Link
                   key={pick.slug}
                   href={`${categoryHref}/${pick.slug}`}
-                  className="group block rounded-2xl border-2 border-aru-orange/20 bg-white overflow-hidden transition-all duration-300 hover:border-aru-orange hover:shadow-xl hover:shadow-aru-orange/10"
+                  className="group block rounded-2xl border-2 border-prg-red/20 bg-white overflow-hidden transition-all duration-300 hover:border-prg-red hover:shadow-xl hover:shadow-prg-red/10"
                 >
                   <div className="flex flex-col sm:flex-row">
-                    <div className="sm:w-72 shrink-0 aspect-[16/10] sm:aspect-[4/3] overflow-hidden bg-gradient-to-br from-aru-cyan/20 to-aru-orange/20">
+                    <div className="sm:w-72 shrink-0 aspect-[16/10] sm:aspect-[4/3] overflow-hidden bg-gradient-to-br from-prg-blue/20 to-prg-red/20">
                       {tour?.imageUrl ? (
                         <img
                           src={tour.imageUrl}
@@ -129,7 +129,7 @@ export function GuideTemplate({
                       )}
                     </div>
                     <div className="p-6 sm:p-8 flex flex-col flex-1 justify-center">
-                      <h3 className="font-display font-bold text-xl text-slate-900 group-hover:text-aru-orange transition-colors" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
+                      <h3 className="font-display font-bold text-xl text-slate-900 group-hover:text-prg-red transition-colors" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
                         {tour?.title ?? "View tour details"}
                       </h3>
                       {(tour?.rating ?? 0) > 0 && (tour?.reviewCount ?? 0) > 0 && (
@@ -142,7 +142,7 @@ export function GuideTemplate({
                       {tour?.fromPriceDisplay && (
                         <p className="mt-1 font-medium text-slate-700">{tour.fromPriceDisplay}</p>
                       )}
-                      <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-aru-orange">
+                      <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-prg-red">
                         View full details &amp; book
                         <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -157,7 +157,7 @@ export function GuideTemplate({
                       <ul className="space-y-1">
                         {pick.bestFor.map((item, i) => (
                           <li key={i} className="flex gap-2 text-slate-600 text-sm">
-                            <span className="shrink-0 mt-1.5 w-2 h-2 rounded-full bg-aru-orange" aria-hidden />
+                            <span className="shrink-0 mt-1.5 w-2 h-2 rounded-full bg-prg-red" aria-hidden />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -192,7 +192,7 @@ export function GuideTemplate({
             <ol className="space-y-4 text-slate-600 leading-relaxed">
               {guide.whatToExpect.map((step, i) => (
                 <li key={i} className="flex gap-4">
-                  <span className="shrink-0 w-8 h-8 rounded-full bg-aru-cyan/20 text-aru-cyan font-bold text-sm flex items-center justify-center">
+                  <span className="shrink-0 w-8 h-8 rounded-full bg-prg-blue/20 text-prg-blue font-bold text-sm flex items-center justify-center">
                     {i + 1}
                   </span>
                   <span>{step}</span>
@@ -205,7 +205,7 @@ export function GuideTemplate({
 
       {/* FAQ */}
       {guide.faqs && guide.faqs.length > 0 && (
-        <div className="bg-aru-cyan/5 py-10 lg:py-14 border-y border-aru-cyan/10">
+        <div className="bg-prg-blue/5 py-10 lg:py-14 border-y border-prg-blue/10">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
             <h2 id="faq-heading" className="font-display font-bold text-xl text-slate-900 mb-6" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
               Frequently asked questions
@@ -214,11 +214,11 @@ export function GuideTemplate({
               {guide.faqs.map((faq, i) => (
                 <details
                   key={i}
-                  className="group rounded-2xl border border-slate-200 bg-white overflow-hidden transition-all duration-200 hover:border-aru-cyan/50 open:border-aru-cyan open:shadow-md"
+                  className="group rounded-2xl border border-slate-200 bg-white overflow-hidden transition-all duration-200 hover:border-prg-blue/50 open:border-prg-blue open:shadow-md"
                 >
                   <summary className="px-6 py-5 font-semibold text-slate-900 cursor-pointer list-none flex justify-between items-center gap-4">
                     <span className="pr-2">{faq.question}</span>
-                    <span className="shrink-0 w-11 h-11 rounded-xl bg-slate-100 text-aru-cyan flex items-center justify-center group-open:bg-aru-cyan group-open:text-white transition-all duration-200">
+                    <span className="shrink-0 w-11 h-11 rounded-xl bg-slate-100 text-prg-blue flex items-center justify-center group-open:bg-prg-blue group-open:text-white transition-all duration-200">
                       <svg className="w-5 h-5 group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
@@ -250,14 +250,14 @@ export function GuideTemplate({
                   <Link
                     key={g.href}
                     href={g.href}
-                    className="group flex items-center gap-3 rounded-2xl border-2 border-slate-200 bg-white px-5 py-4 font-medium text-slate-800 transition-all duration-200 hover:border-aru-cyan hover:shadow-lg hover:shadow-aru-cyan/10"
+                    className="group flex items-center gap-3 rounded-2xl border-2 border-slate-200 bg-white px-5 py-4 font-medium text-slate-800 transition-all duration-200 hover:border-prg-blue hover:shadow-lg hover:shadow-prg-blue/10"
                   >
-                    <span className="shrink-0 w-10 h-10 rounded-xl bg-aru-cyan/10 text-aru-cyan group-hover:bg-aru-cyan group-hover:text-white flex items-center justify-center transition-colors">
+                    <span className="shrink-0 w-10 h-10 rounded-xl bg-prg-blue/10 text-prg-blue group-hover:bg-prg-blue group-hover:text-white flex items-center justify-center transition-colors">
                       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </span>
-                    <span className="min-w-0 flex-1 group-hover:text-aru-cyan transition-colors line-clamp-2">{g.label}</span>
+                    <span className="min-w-0 flex-1 group-hover:text-prg-blue transition-colors line-clamp-2">{g.label}</span>
                   </Link>
                 ))}
               </div>
@@ -267,11 +267,11 @@ export function GuideTemplate({
       )}
 
       {/* Back to category + all tours */}
-      <div className="bg-aru-cyan/5 py-14 lg:py-20 border-t border-aru-cyan/10">
+      <div className="bg-prg-blue/5 py-14 lg:py-20 border-t border-prg-blue/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
           <Link
             href={categoryHref}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-aru-cyan hover:bg-aru-cyan-dark transition-colors shadow-md hover:shadow-lg"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-prg-blue hover:bg-prg-blue-dark transition-colors shadow-md hover:shadow-lg"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />

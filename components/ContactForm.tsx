@@ -13,19 +13,19 @@ export function ContactForm() {
           className="font-display font-bold text-3xl sm:text-4xl text-slate-900 text-center mb-4"
           style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}
         >
-          Partner <span className="text-aru-orange">With Us</span>
+          Partner <span className="text-prg-red">With Us</span>
         </h2>
         <p className="text-slate-600 text-center max-w-2xl mx-auto mb-4">
           Tell us about your tour business. We’ll get back to you shortly.
         </p>
         <p className="text-slate-700 text-center max-w-2xl mx-auto mb-10 font-medium">
-          Join us early and be part of Aru365—the next generation of ArubaBuddies, now fully focused on tours and experiences.
+          Join us early and be part of Prg365—Prague's dedicated platform for tours and experiences.
         </p>
         <p className="text-slate-600 text-center text-sm font-semibold mb-4">Contact</p>
         <div className="flex flex-wrap justify-center gap-4">
           <a
             href="mailto:matthijs@2xgen.com"
-            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-medium text-white bg-aru-orange hover:bg-aru-orange-dark btn-lift shadow-md"
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-medium text-white bg-prg-red hover:bg-prg-red-dark btn-lift shadow-md"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

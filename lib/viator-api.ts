@@ -30,6 +30,8 @@ export interface ViatorProductSummary {
   imageUrl: string | null;
   /** Free cancellation if available */
   freeCancellation: boolean;
+  /** Operator/supplier name (e.g. "Red Sail Sports - Aruba"). From Viator API or listing. */
+  operator?: string;
 }
 
 /** Raw bulk response item – we only type what we use; API schema may use other field names */

@@ -10,7 +10,7 @@ import {
   type ReactNode,
 } from "react";
 
-const STORAGE_KEY = "aru365_cookie_consent";
+const STORAGE_KEY = "prg365_cookie_consent";
 
 export type CookieConsent = {
   essential: true;
@@ -121,7 +121,7 @@ function CookieBanner({
             <p className="text-sm text-slate-700 leading-relaxed">
               We use essential cookies to make the site work. We may use analytics (e.g. Google Search Console and
               similar tools) to understand how the site is used. You can accept all cookies or only essential ones.{" "}
-              <Link href="/terms" className="text-aru-cyan hover:underline font-medium">
+              <Link href="/terms" className="text-prg-blue hover:underline font-medium">
                 Terms &amp; Conditions
               </Link>
             </p>
@@ -146,7 +146,7 @@ function CookieBanner({
             <button
               type="button"
               onClick={onAcceptAll}
-              className="px-4 py-2.5 text-sm font-medium text-white bg-aru-cyan hover:bg-aru-cyan-dark rounded-lg transition-colors"
+              className="px-4 py-2.5 text-sm font-medium text-white bg-prg-blue hover:bg-prg-blue-dark rounded-lg transition-colors"
             >
               Accept all
             </button>

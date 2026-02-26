@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Outfit, DM_Sans, Playfair_Display } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
 import { Header } from "@/components/Header";
 import { CookieConsentProvider } from "@/components/CookieConsentContext";
+
+const VercelAnalytics = dynamic(() => import("@/components/VercelAnalytics"), {
+  ssr: false,
+});
 import "./globals.css";
 
 const outfit = Outfit({
@@ -23,17 +27,17 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-const SITE_URL = "https://aru365.com";
+const SITE_URL = "https://prg365.com";
 const DEFAULT_OG_IMAGE =
-  "https://soaacpusdhyxwucjhhpy.supabase.co/storage/v1/object/public/aru365/aru365%20tours%20and%20excursions%20in%20aruba.png";
-const defaultTitle = "Aru365 – Book Best Tours in Aruba | Catamaran, Snorkeling, ATV, Sunset Cruises";
+  "https://soaacpusdhyxwucjhhpy.supabase.co/storage/v1/object/public/aru365/Prg365.png";
+const defaultTitle = "Prg365 – Book Best Tours in Prague | Walking, Castle, Beer & Day Trips";
 const defaultDescription =
-  "Aruba's dedicated platform for booking the best tours and excursions. Find, compare, and book snorkeling tours, sunset cruises, ATV adventures, and more — all in one place.";
+  "Prague's dedicated platform for booking the best tours and experiences. Find, compare, and book walking tours, castle visits, beer tours, day trips, and more.";
 
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Aru365",
+  name: "Prg365",
   url: SITE_URL,
   logo: DEFAULT_OG_IMAGE,
   description: defaultDescription,
@@ -42,13 +46,13 @@ const organizationSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Aru365",
+  name: "Prg365",
   url: SITE_URL,
   description: defaultDescription,
-  publisher: { "@type": "Organization", name: "Aru365", url: SITE_URL },
+  publisher: { "@type": "Organization", name: "Prg365", url: SITE_URL },
   potentialAction: {
     "@type": "SearchAction",
-    target: { "@type": "EntryPoint", urlTemplate: `${SITE_URL}/best-tours-in-aruba?q={search_term_string}` },
+    target: { "@type": "EntryPoint", urlTemplate: `${SITE_URL}/best-tours-in-prague?q={search_term_string}` },
     "query-input": "required name=search_term_string",
   },
 };
@@ -67,7 +71,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en",
     url: SITE_URL,
-    siteName: "Aru365",
+    siteName: "Prg365",
     title: defaultTitle,
     description: defaultDescription,
     images: [
@@ -75,7 +79,7 @@ export const metadata: Metadata = {
         url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Aru365 – Tours and excursions in Aruba",
+        alt: "Prg365 – Tours and experiences in Prague",
       },
     ],
   },
@@ -106,7 +110,7 @@ export default function RootLayout({
           />
           <Header />
           {children}
-          <Analytics />
+          <VercelAnalytics />
         </CookieConsentProvider>
       </body>
     </html>

@@ -26,11 +26,11 @@ function FaqAccordion({ faqs }: { faqs: { question: string; answer: string }[] }
       {faqs.map((faq, i) => (
         <details
           key={i}
-          className="group rounded-2xl border border-slate-200 bg-white overflow-hidden transition-all duration-200 hover:border-aru-cyan/50 open:border-aru-cyan open:shadow-md"
+          className="group rounded-2xl border border-slate-200 bg-white overflow-hidden transition-all duration-200 hover:border-prg-blue/50 open:border-prg-blue open:shadow-md"
         >
           <summary className="px-6 py-5 font-semibold text-slate-900 cursor-pointer list-none flex justify-between items-center gap-4">
             <span className="pr-2">{faq.question}</span>
-            <span className="shrink-0 w-11 h-11 rounded-xl bg-slate-100 text-aru-cyan flex items-center justify-center group-open:bg-aru-cyan group-open:text-white transition-all duration-200">
+            <span className="shrink-0 w-11 h-11 rounded-xl bg-slate-100 text-prg-blue flex items-center justify-center group-open:bg-prg-blue group-open:text-white transition-all duration-200">
               <svg className="w-5 h-5 group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
@@ -55,6 +55,8 @@ export function TourListingTemplate({
 }: TourListingTemplateProps) {
   const itinerary = (viatorItinerary && viatorItinerary.length > 0 ? viatorItinerary : listing.itinerary) ?? [];
   const displayTitle = liveData?.title ?? listing.seoTitle ?? listing.angle;
+  /** Operator name for "Operated by" and CTA: from Viator/static data when available, else listing. */
+  const displayOperator = liveData?.operator ?? listing.operator;
   const hasRating = (liveData?.rating ?? 0) > 0;
   const hasReviews = (liveData?.reviewCount ?? 0) > 0;
   const priceDisplay = liveData?.fromPriceDisplay ?? "Price from (see options)";
@@ -87,7 +89,7 @@ export function TourListingTemplate({
             "@type": "Product",
             name: displayTitle,
             description: listing.metaDescription,
-            brand: { "@type": "Brand", name: listing.operator },
+            brand: { "@type": "Brand", name: displayOperator },
             ...(liveData.imageUrl && { image: liveData.imageUrl }),
             ...(hasRating &&
               hasReviews && {
@@ -147,7 +149,7 @@ export function TourListingTemplate({
           href={bookUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl font-semibold text-white bg-aru-orange hover:bg-aru-orange-dark transition-colors shadow-lg hover:shadow-xl"
+          className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl font-semibold text-white bg-prg-red hover:bg-prg-red-dark transition-colors shadow-lg hover:shadow-xl"
         >
           View options &amp; book
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -161,7 +163,7 @@ export function TourListingTemplate({
           <Breadcrumbs
             items={[
               { label: "Home", href: "/" },
-              { label: "Best tours in Aruba", href: "/best-tours-in-aruba" },
+              { label: "Best tours in Prague", href: "/best-tours-in-prague" },
               { label: categoryTitle, href: categoryHref },
               { label: displayTitle },
             ]}
@@ -170,7 +172,7 @@ export function TourListingTemplate({
       </div>
 
       {/* Hero: image + title, operator, rating, price, CTA */}
-      <div className="relative bg-aru-cyan/5 overflow-hidden border-b border-aru-cyan/10">
+      <div className="relative bg-prg-blue/5 overflow-hidden border-b border-prg-blue/10">
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
             {/* Image */}
@@ -191,7 +193,7 @@ export function TourListingTemplate({
             </div>
 
             <div className="lg:col-span-3">
-              <p className="text-aru-cyan font-medium text-sm uppercase tracking-widest">
+              <p className="text-prg-blue font-medium text-sm uppercase tracking-widest">
                 {categoryTitle}
               </p>
               <h1
@@ -201,7 +203,7 @@ export function TourListingTemplate({
                 {displayTitle}
               </h1>
               <p className="mt-2 text-slate-600 font-medium">
-                Operated by {listing.operator}
+                Operated by {displayOperator}
               </p>
               {(hasRating || hasReviews) && (
                 <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
@@ -227,7 +229,7 @@ export function TourListingTemplate({
                 href={bookUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-semibold text-white bg-aru-orange hover:bg-aru-orange-dark transition-colors shadow-md hover:shadow-lg"
+                className="mt-6 inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-semibold text-white bg-prg-red hover:bg-prg-red-dark transition-colors shadow-md hover:shadow-lg"
               >
                 View options &amp; book
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -285,7 +287,7 @@ export function TourListingTemplate({
             <ul className="grid sm:grid-cols-2 gap-2 text-slate-700">
               {listing.inclusions.map((item, i) => (
                 <li key={i} className="flex gap-3">
-                  <span className="shrink-0 mt-1.5 w-2 h-2 rounded-full bg-aru-cyan" aria-hidden />
+                  <span className="shrink-0 mt-1.5 w-2 h-2 rounded-full bg-prg-blue" aria-hidden />
                   <span>{item}</span>
                 </li>
               ))}
@@ -304,7 +306,7 @@ export function TourListingTemplate({
             <ol className="space-y-6">
               {itinerary.map((step, i) => (
                 <li key={i} className="flex gap-4">
-                  <span className="shrink-0 w-10 h-10 rounded-full bg-aru-cyan/20 text-aru-cyan font-bold flex items-center justify-center">
+                  <span className="shrink-0 w-10 h-10 rounded-full bg-prg-blue/20 text-prg-blue font-bold flex items-center justify-center">
                     {i + 1}
                   </span>
                   <div>
@@ -331,7 +333,7 @@ export function TourListingTemplate({
                   <ul className="space-y-2 text-slate-600">
                     {listing.whyWeRecommend.map((item, i) => (
                       <li key={i} className="flex gap-2">
-                        <span className="shrink-0 mt-1.5 w-2 h-2 rounded-full bg-aru-orange" aria-hidden />
+                        <span className="shrink-0 mt-1.5 w-2 h-2 rounded-full bg-prg-red" aria-hidden />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -349,7 +351,7 @@ export function TourListingTemplate({
                 <ul className="flex flex-wrap gap-2">
                   {listing.highlights.map((h, i) => (
                     <li key={i}>
-                      <span className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-aru-orange/10 text-aru-orange border border-aru-orange/20">
+                      <span className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-prg-red/10 text-prg-red border border-prg-red/20">
                         {h}
                       </span>
                     </li>
@@ -375,9 +377,9 @@ export function TourListingTemplate({
                   <Link
                     key={related.productCode}
                     href={`${categoryHref}/${related.slug}`}
-                    className="group flex flex-col rounded-xl border-2 border-slate-200 bg-white overflow-hidden text-left transition-all duration-200 hover:border-aru-cyan hover:shadow-lg hover:shadow-aru-cyan/10"
+                    className="group flex flex-col rounded-xl border-2 border-slate-200 bg-white overflow-hidden text-left transition-all duration-200 hover:border-prg-blue hover:shadow-lg hover:shadow-prg-blue/10"
                   >
-                    <div className="aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-aru-cyan/20 to-aru-orange/20">
+                    <div className="aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-prg-blue/20 to-prg-red/20">
                       {imageUrl ? (
                         <img
                           src={imageUrl}
@@ -393,11 +395,11 @@ export function TourListingTemplate({
                       )}
                     </div>
                     <div className="p-4 flex flex-col flex-1">
-                      <h3 className="font-display font-bold text-base text-slate-900 group-hover:text-aru-cyan transition-colors line-clamp-2" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
+                      <h3 className="font-display font-bold text-base text-slate-900 group-hover:text-prg-blue transition-colors line-clamp-2" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
                         {title}
                       </h3>
                       <p className="mt-1 text-sm text-slate-500">{related.operator}</p>
-                      <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-aru-cyan">
+                      <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-prg-blue">
                         View tour
                         <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -414,7 +416,7 @@ export function TourListingTemplate({
 
       {/* FAQ */}
       {listing.faqs && listing.faqs.length > 0 && (
-        <div className="bg-aru-cyan/5 py-10 lg:py-14 border-y border-aru-cyan/10">
+        <div className="bg-prg-blue/5 py-10 lg:py-14 border-y border-prg-blue/10">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
             <h2 id="faq-heading" className="font-display font-bold text-xl text-slate-900 mb-6" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
               Frequently asked questions
@@ -425,15 +427,15 @@ export function TourListingTemplate({
       )}
 
       {/* CTA + back to category */}
-      <div className="bg-aru-orange/5 py-10 lg:py-14 border-t-2 border-aru-orange/20">
+      <div className="bg-prg-red/5 py-10 lg:py-14 border-t-2 border-prg-red/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
           <a
             href={bookUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-white bg-aru-orange hover:bg-aru-orange-dark transition-colors shadow-md hover:shadow-lg"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-white bg-prg-red hover:bg-prg-red-dark transition-colors shadow-md hover:shadow-lg"
           >
-            View options &amp; book — {listing.operator}
+            View options &amp; book — {displayOperator}
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
@@ -443,7 +445,7 @@ export function TourListingTemplate({
           </p>
           <Link
             href={categoryHref}
-            className="mt-8 inline-flex items-center gap-2 text-aru-cyan font-semibold hover:text-aru-cyan-dark transition-colors"
+            className="mt-8 inline-flex items-center gap-2 text-prg-blue font-semibold hover:text-prg-blue-dark transition-colors"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
             Back to {categoryTitle}

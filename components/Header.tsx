@@ -5,11 +5,11 @@ import { usePathname } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { pillars } from "@/data/pillars";
 
-const HIDDEN_IN_NAV = ["things-to-do-in-aruba-with-kids"];
+const HIDDEN_IN_NAV: string[] = [];
 
-/** Nav label: strip " in Aruba" so we show e.g. "Catamaran Cruises" not "Catamaran Cruises in Aruba". */
+/** Nav label: strip " in Prague" so we show e.g. "Walking Tours" not "Walking Tours in Prague". */
 function navCategoryLabel(title: string): string {
-  return title.replace(/\s+in\s+Aruba$/i, "").trim() || title;
+  return title.replace(/\s+in\s+Prague$/i, "").trim() || title;
 }
 
 export function Header() {
@@ -28,7 +28,7 @@ export function Header() {
   }, []);
 
   const isHome = pathname === "/";
-  const isBestTours = pathname === "/best-tours-in-aruba";
+  const isBestTours = pathname === "/best-tours-in-prague";
   const isPartner = pathname === "/partner";
 
   return (
@@ -40,20 +40,20 @@ export function Header() {
             className="font-display font-bold text-xl text-slate-900 hover:opacity-90 transition-opacity flex-shrink-0"
             style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}
           >
-            <span className="text-aru-orange">Aru</span>
-            <span className="text-aru-cyan">365</span>
+            <span className="text-prg-red">Prg</span>
+            <span className="text-prg-blue">365</span>
           </Link>
 
           <div className="flex items-center gap-6">
             <Link
               href="/"
-              className={`text-sm font-medium transition-colors hidden sm:inline-block ${isHome ? "text-aru-orange" : "text-slate-600 hover:text-slate-900"}`}
+              className={`text-sm font-medium transition-colors hidden sm:inline-block ${isHome ? "text-prg-red" : "text-slate-600 hover:text-slate-900"}`}
             >
               Home
             </Link>
             <Link
-              href="/best-tours-in-aruba"
-              className={`text-sm font-medium transition-colors hidden sm:inline-block ${isBestTours ? "text-aru-orange" : "text-slate-600 hover:text-slate-900"}`}
+              href="/best-tours-in-prague"
+              className={`text-sm font-medium transition-colors hidden sm:inline-block ${isBestTours ? "text-prg-red" : "text-slate-600 hover:text-slate-900"}`}
             >
               Best tours
             </Link>

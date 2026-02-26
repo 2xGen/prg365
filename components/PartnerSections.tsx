@@ -20,32 +20,32 @@ export function PartnerSections() {
           className="font-display font-bold text-3xl sm:text-4xl text-slate-900 text-center mb-4"
           style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}
         >
-          How <span className="text-aru-cyan">Aru365</span> Helps Your Business
+          How <span className="text-prg-blue">Prg365</span> Helps Your Business
         </h2>
         <p className="text-slate-600 text-center max-w-2xl mx-auto mb-14">
           We focus on what converts: tours and experiences.
         </p>
         <div className="flex flex-col gap-6 max-w-3xl mx-auto">
           {/* Tours & Excursions — Primary */}
-          <div className="bg-cyan-50 border border-aru-cyan/20 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
+          <div className="bg-cyan-50 border border-prg-blue/20 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
             <h3 className="font-semibold text-slate-900 text-lg mb-2">
-              Tours & <span className="text-aru-cyan">Excursions</span> <span className="text-slate-500 font-normal text-sm">(Primary Focus)</span>
+              Tours & <span className="text-prg-blue">Excursions</span> <span className="text-slate-500 font-normal text-sm">(Primary Focus)</span>
             </h3>
             <p className="text-slate-600 text-sm leading-relaxed mb-4">
-              Work directly with your existing booking system or Viator listings to gain strategic exposure on a platform built exclusively around Aruba tours.
+              Work directly with your existing booking system or Viator listings to gain strategic exposure on a platform built exclusively around Prague tours.
             </p>
             <p className="text-slate-700 font-medium text-sm mb-2">What you get:</p>
             <ul className="space-y-1.5 text-slate-600 text-sm mb-6">
               {tourBenefits.map((item, i) => (
                 <li key={i} className="flex gap-2">
-                  <span className="text-aru-cyan shrink-0">✓</span>
+                  <span className="text-prg-blue shrink-0">✓</span>
                   {item}
                 </li>
               ))}
             </ul>
             <a
               href="#contact"
-              className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 rounded-xl font-semibold text-white bg-aru-cyan hover:bg-aru-cyan-dark text-sm transition-colors"
+              className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 rounded-xl font-semibold text-white bg-prg-blue hover:bg-prg-blue-dark text-sm transition-colors"
             >
               Partner Your Tour
             </a>
@@ -54,17 +54,17 @@ export function PartnerSections() {
           {/* Restaurants — Launching Soon */}
           <div className="bg-amber-50/70 border border-slate-200 rounded-2xl p-6 shadow-sm">
             <h3 className="font-semibold text-slate-900 text-lg mb-2">
-              Restaurants & <span className="text-aru-orange">Dining</span> <span className="text-slate-500 font-normal text-sm">(Launching Soon)</span>
+              Restaurants & <span className="text-prg-red">Dining</span> <span className="text-slate-500 font-normal text-sm">(Launching Soon)</span>
             </h3>
             <p className="text-slate-600 text-sm leading-relaxed mb-4">
-              Restaurant partnerships will open in Phase 2 of Aru365. We’re currently prioritizing tours and excursions to build Aruba’s leading experience platform.
+              Restaurant partnerships will open in Phase 2 of Prg365. We’re currently prioritizing tours and excursions to build Aruba’s leading experience platform.
             </p>
             <p className="text-slate-600 text-sm mb-6">
               Interested in early access for restaurant partnerships? Reach out below.
             </p>
             <a
               href="#contact"
-              className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 rounded-xl font-semibold text-slate-700 bg-white border-2 border-slate-300 hover:border-aru-orange hover:text-aru-orange text-sm transition-colors"
+              className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 rounded-xl font-semibold text-slate-700 bg-white border-2 border-slate-300 hover:border-prg-red hover:text-prg-red text-sm transition-colors"
             >
               Join Restaurant Waitlist
             </a>

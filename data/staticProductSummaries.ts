@@ -1,21 +1,22 @@
 /**
- * Static snapshot of Viator-style product data for category "Popular choices" cards.
- * Used when the Viator API is unavailable (e.g. production without key or API failure)
- * so production shows the same tour cards as localhost.
+ * Static snapshot of Viator-style product data for tour cards and listing pages.
+ * Production never calls the Viator API; all titles, prices, ratings, and images
+ * come from staticProductSummariesGenerated.json (and staticByCode fallback below).
  *
- * Shape matches ViatorProductSummary (title, fromPriceDisplay, rating, reviewCount, etc.).
- * productUrl: internal link when we have a listing; else from dump (productUrl) or getCategoryBookUrl().
+ * To refresh: run `node scripts/dump-static-product-summaries.mjs` (with VIATOR_API_KEY
+ * in .env.local). It fetches products/bulk + schedules/bulk and overwrites the JSON.
+ * Commit the updated JSON so production has the latest data.
  */
 import type { ViatorProductSummary } from "@/lib/viator-api";
 import { getListingByProductCode } from "@/data/listings";
 import { getCategoryBookUrl, getViatorProductBookUrl } from "@/lib/booking";
 
-/** Viator API snapshot: run `node scripts/dump-static-product-summaries.mjs` locally (with VIATOR_API_KEY in .env.local) to fill this file. Images and prices are taken from Viator only via this dump—no placeholders. Production then shows Viator titles, prices, ratings, and images without calling the API at runtime. */
+/** Filled by scripts/dump-static-product-summaries.mjs (products bulk + schedules bulk). Production uses only this + staticByCode; no live API. */
 import generatedStatic from "./staticProductSummariesGenerated.json";
 
 const generatedByCode = generatedStatic as Record<
   string,
-  { title: string; fromPriceDisplay: string; rating: number; reviewCount: number; imageUrl: string | null; freeCancellation: boolean; productUrl?: string | null }
+  { title: string; fromPriceDisplay: string; rating: number; reviewCount: number; imageUrl: string | null; freeCancellation: boolean; productUrl?: string | null; operator?: string | null }
 >;
 
 /**
@@ -245,6 +246,136 @@ const staticByCode: Record<
   "102406P1": { title: "Parasailing", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
   "119085P6": { title: "Tube Ride 15 minutes", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
   "8936P2": { title: "Aruba Parasailing Adventure", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  // Prague walking tours – fallback when API off or no generated snapshot
+  "8524P12": { title: "Prague 3-hour Afternoon Walking Tour including Prague Castle", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "8524P11": { title: "Prague Old Town, New Town and Jewish Quarter Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "205344P1": { title: "Essential Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "20364P1": { title: "The Best of Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "52397P1": { title: "Prague Old Town and Medieval Underground and Dungeon Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "9396P5": { title: "Prague Walking Tour of Old Town, Charles Bridge and Prague Castle", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "8367P20": { title: "One Day See It All Prague Tour with River Boat Cruise", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "8576P1": { title: "Prague Full Day Private Walking Tour with Lunch and Boat Trip", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "184581P1": { title: "Really Small Group Prague Old Town and Jewish Quarter Walking Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "26685P1": { title: "Discover Prague Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  // Prague castle & palace tours – fallback when no generated snapshot
+  "9396P1": { title: "Prague Castle Walking Tour Including Admission Tickets", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "268173P3": { title: "Small Group Prague Castle Tour Including Admissions", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "9396P4": { title: "Skip-the-line Prague Castle Admission Ticket", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "195834P35": { title: "Prague Castle Skip-the-line Ticket with Audio Guide", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "20364P60": { title: "Prague Castle Interiors Tour with English Guide and Entry Ticket", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "205344P2": { title: "Complete Castle Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "26685P12": { title: "Prague Castle Private Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "144059P1": { title: "One Tour To Rule Them All", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  // Prague beer tours – fallback when no generated snapshot
+  "353060P1": { title: "Hidden Beer Gems of Old Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "320146P1": { title: "Pubs of Prague Historic Tour with Drinks Included", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "20624P1": { title: "Guided Prague City Food Tasting Walking Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "24261P1": { title: "Beer Museum Guided Tour and Bottle Your own Beer", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "20364P8": { title: "Small Group Local Pubs Walking Tour And Traditional Czech Dinner", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "7614P1": { title: "Czech Beer Tasting Paired with Cheese and Crackers in Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "8656P1": { title: "Prague Mini Breweries Beer Tour with Czech Appetizers", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "144059P2": { title: "One Prague Tour Old Town Road", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "8367P19": { title: "Castle Side Beer Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "176832P1": { title: "Prague Foodie Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  // Day trips from Prague – fallback when no generated snapshot
+  "116712P13": { title: "Český Krumlov Full-day tour from Prague and back", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "8528P1": { title: "Small-Group Bohemian Switzerland National Park Day Trip from Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "10919P5": { title: "Trip to Český Krumlov from Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "72192P3": { title: "THE BEST of 2 Countries in 1 Day – Bohemian and Saxon Switzerland", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "116712P43": { title: "Bohemian and Saxon Switzerland tour from Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "48593P1": { title: "Day Trip to Kutná Hora by bus from Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "72192P14": { title: "THE BEST OF SAXON SWITZERLAND FROM PRAGUE – Bastei Bridge and Dresden", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "26739P12": { title: "Karlovy Vary day tour from Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "10919P10": { title: "Trip to Karlovy Vary and Moser Factory from Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "2190CEDT10": { title: "Kutná Hora Day Trip from Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  // River cruises in Prague – fallback when no generated snapshot
+  "10919P3": { title: "Prague Half-Day City Tour Including Vltava River Cruise, Castle and Old Town", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "63851P9": { title: "Prague Boats 1-hour Devil's Channel Cruise", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "67514P2": { title: "Jazzboat Prague Popular Evening Cruise With Live Jazz", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "8367P15": { title: "Charles Bridge River Boat Cruise and Guided Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "63851P1": { title: "Prague Boats 1-hour Cruise", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "10919P41": { title: "Prague Sightseeing Boat Cruise with Buffet Dinner", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "2190CEDT6": { title: "Prague Night Tour and River Vltava Dinner Cruise", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "63851P6": { title: "Prague Boats 3-hour Crystal Dinner Cruise", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "63851P10": { title: "Prague Boats 2-hour Lunch Cruise", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "63851P18": { title: "Evening eco cruise with a glass of Prosecco", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  // Food tours in Prague – fallback when no generated snapshot
+  "7812P36": { title: "Secret Food Tours Prague Malá Strana", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "176832P1": { title: "Prague Foodie Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "441609P4": { title: "Local Prague Food Tour in secrets HIDDEN GEMS Small Groups", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "20624P1": { title: "Guided Prague City Food Tasting Walking Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "299238P6": { title: "Good Evening Old Town Food Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "20624P2": { title: "Eating Prague by Night Drinks and Food Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "169084P1": { title: "Delicious Food Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "35546P1": { title: "Prague Food and Culture Tour with Local Foodies", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "20364P9": { title: "5 Course Medieval Dining Experience in Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "24380P284": { title: "Prague's Favorite Food Private Small Group Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  // Jewish heritage tours in Prague – fallback when no generated snapshot
+  "9396P2": { title: "Prague Jewish Quarter and Synagogue Walking Tour with admission tickets", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "184581P1": { title: "Really Small Group Max 6 People Prague Old Town and Jewish Quarter Walking Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "9396P10": { title: "Prague Old Town and Jewish Quarter 90 minutes Guided Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "9396P18": { title: "Prague Jewish Town Admission Ticket with introduction", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "110804P247": { title: "Prague's Jewish Quarter Meander through its storied streets on an audio walk", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "2190CEDT15": { title: "Terezin Concentration Camp Day Tour from Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "8524P13": { title: "Terezin Fortress and Concentration Camp Tour from Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "16436P14": { title: "Terezin Memorial Half-Day Tour from Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "123929P19": { title: "Best of Prague and trip to Terezin concentration camp ALL INCLUSIVE", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "8576P10": { title: "Terezin Concentration Camp Private Tour from Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  // Night tours in Prague – fallback when no generated snapshot
+  "164611P3": { title: "Private Sightseeing in Prague By Night", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "36131P1": { title: "PRAGUE BY NIGHT walking tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "9241P1": { title: "Prague Old Town Mystery Walking Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "7434P6": { title: "Prague Ghosts and Legends of Old Town Walking Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "52397P1": { title: "Prague Oldtown and Medieval Underground and Dungeon Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "435382P8": { title: "Prague Night Combo Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "435382P5": { title: "Prague in Night Trike Group Tour Live Guided", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "5557409P6": { title: "Where Actual Czechs Drink Beer A Short Tour and Beer Experience", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "104219P3": { title: "Best views of Prague by night", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "41319P15": { title: "Prague at night 4 hours Private Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  // Private tours in Prague – fallback when no generated snapshot
+  "26685P5": { title: "Prague In One Day Private Tour 7 Hours", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "42115P2": { title: "Historical Car Sightseeing Tour in Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "381158P3": { title: "Prague Private Transfer to/from Prague Airport", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "8469P2": { title: "Prague Airport Private Arrival Transfer And Half-Day City Walking Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "104357P520": { title: "Prague Jewish Quartier Walking Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "55815P1": { title: "Prague Old Town Facts and Legends", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "26685P41": { title: "Prague Private Boat Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "26685P21": { title: "Prague Private Boat Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "64475P3": { title: "Best of Prague Private Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "8576P1": { title: "Prague Full Day Private Walking Tour with Lunch and Boat Trip", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  // Bike tours in Prague – fallback when no generated snapshot
+  "8678P67": { title: "Bohemian Switzerland Boat n Bike Private Trip from Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "40610P13": { title: "Prague Mountain Biking Blast Through The Best Singletracks", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "332549P395": { title: "Effortless E-Bike Tour of Prague Old, Lesser and New Towns", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "162403P1": { title: "Prague Cycle Boat", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "435382P23": { title: "Prague's Viewpoints and Sightseeing on Comfortable E-bike", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "435382P22": { title: "Prague's Panoramic Viewpoints and Sightseeing on Electric Trike", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "13139P6": { title: "Prague 2 Hour Beer Bike with 50 L with Unlimited Beer", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "14331P2": { title: "Small Group 1 Hour Segway Sightseeing Tour in Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "40610P12": { title: "From Prague Mountain Biking Full Day Trip to Karlstejn Castle", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "435382P21": { title: "Prague Electric Trike Tour Sightseeing Viewpoints and Fun", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  // Photography tours in Prague – fallback when no generated snapshot
+  "286699P1": { title: "Photoshoting in the Most Signatured Places in Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "37094P67": { title: "Private Photoshoot with a Professional Photographer in Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "8566P1": { title: "Photography Tour of Prague by Night", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "412164P32": { title: "Prague Private Photoshoot", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "144126P1": { title: "Prague Photo Walk Tour Family Couple Solo", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "286699P2": { title: "Love Story Photoshooting in Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "471717P1": { title: "Prague Photographer Couple Engagement Portrait Photoshoot", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "321017P70": { title: "Prague Professional Photoshoot at Prague Castle", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "321017P72": { title: "Prague Professional Photoshoot at Prague Old Town", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "286699P3": { title: "Night Lights of Prague Photoshoot after Sunset", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  // Cultural experiences in Prague – fallback when no generated snapshot
+  "24380P278": { title: "Best of Prague Highlights and Hidden Gems", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "64475P4": { title: "Rick Steves Guides Private Tour of Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "20364P46": { title: "Jewish History and Old Town Walking Tour of Prague Private", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "64475P21": { title: "LUXURY Personal Tour of Prague with PERSONAL PRAGUE GUIDE", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "270388P1": { title: "Historical Private Day Tour of Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "24445P19": { title: "Prague Communism Tour with Communism Museum", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "9457P3": { title: "Private Custom Full-Day Tour of Prague", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "299238P4": { title: "Beer and Tapas Tour Learn About the Czechs Beloved Beverage", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "30791P515": { title: "Prague Czech Beer Experience", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
+  "154718P1": { title: "Communism and Its Fall with Eyewitness Prague Private Tour", fromPriceDisplay: "Price from (see options)", rating: 0, reviewCount: 0, imageUrl: null },
 };
 
 /**
@@ -268,6 +399,9 @@ export function getStaticProductSummaries(
     const productUrl = listing
       ? `/${categorySlug}/${listing.slug}`
       : getViatorProductBookUrl(code);
+    const operator = "operator" in data && typeof (data as { operator?: string }).operator === "string"
+      ? (data as { operator: string }).operator
+      : listing?.operator;
     out.push({
       productCode: code,
       title,
@@ -277,6 +411,7 @@ export function getStaticProductSummaries(
       rating: data.rating,
       imageUrl: data.imageUrl ?? null,
       freeCancellation: data.freeCancellation ?? false,
+      ...(operator && { operator }),
     });
   }
   return out;

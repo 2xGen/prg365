@@ -87,7 +87,7 @@ export default function TermsPage() {
                 <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">6. Contact</h2>
                 <p className="text-slate-600 leading-relaxed">
                   For questions about these terms or about Aru365, you can contact us at{" "}
-                  <a href="mailto:matthijs@2xgen.com" className="text-aru-cyan hover:underline">
+                  <a href="mailto:matthijs@2xgen.com" className="text-prg-blue hover:underline">
                     matthijs@2xgen.com
                   </a>
                   .
@@ -96,7 +96,7 @@ export default function TermsPage() {
             </div>
 
             <p className="mt-10">
-              <Link href="/" className="text-aru-cyan hover:text-aru-cyan-dark font-medium">
+              <Link href="/" className="text-prg-blue hover:text-prg-blue-dark font-medium">
                 ← Back to home
               </Link>
             </p>
