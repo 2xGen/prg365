@@ -71,7 +71,7 @@ export const riverCruisesListings: TourListing[] = [
       { question: "Who operates this cruise?", answer: "This cruise is bookable through Viator. The actual operator is shown on the Viator booking page when you select your date and options." },
       { question: "What is the Devil's Channel?", answer: "Čertovka is a narrow canal that branches off the Vltava and runs through the Lesser Town area. It's a picturesque waterway with historic mills and waterfront views." },
       { question: "Is the boat covered?", answer: "Many Prague river boats have covered or partly covered seating. Check the product description or ask the operator if you're concerned about weather." },
-      { question: "Where do we board?", description: "The pier is in central Prague, usually on the Vltava. Your booking confirmation will have the exact location and time." },
+      { question: "Where do we board?", answer: "The pier is in central Prague, usually on the Vltava. Your booking confirmation will have the exact location and time." },
       { question: "Are drinks or food available?", answer: "It depends on the operator. Some 1-hour cruises have a bar or refreshments; others are sightseeing only. Check the description." },
     ],
   },
