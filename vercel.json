@@ -2,10 +2,10 @@
   "redirects": [
     {
       "source": "/:path*",
-      "destination": "https://aru365.com/:path*",
+      "destination": "https://prg365.com/:path*",
       "permanent": true,
       "has": [
-        { "type": "host", "value": "www.aru365.com" }
+        { "type": "host", "value": "www.prg365.com" }
       ]
     }
   ]
