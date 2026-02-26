@@ -56,13 +56,13 @@ export function HomeTopPicks({ topPicks = [] }: Props) {
                   )}
                 </div>
                 <p className="text-xs font-medium text-prg-red uppercase tracking-wider">{tour.categoryTitle}</p>
-                <div className="flex-1 mt-1">
+                <div className="flex flex-1 flex-col mt-1">
                   <h3 className="font-display font-bold text-lg text-slate-900 group-hover:text-prg-red transition-colors" style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}>
                     {tour.title}
                   </h3>
-                  <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
+                  <div className="mt-auto pt-3 flex flex-wrap items-center justify-between gap-3">
                     <p className="text-slate-600 text-sm font-medium">{tour.fromPriceDisplay}</p>
-                    <span className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-prg-red group-hover:bg-prg-red-dark transition-colors shadow-sm">
+                    <span className="inline-flex h-11 min-w-[7rem] items-center justify-center gap-2 px-4 rounded-xl text-sm font-semibold text-white bg-prg-red group-hover:bg-prg-red-dark transition-colors shadow-sm">
                       View &amp; book
                       <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
