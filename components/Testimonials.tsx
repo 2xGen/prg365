@@ -43,7 +43,7 @@ const offerings = [
   {
     title: "Built for Local Tour Operators",
     description:
-      "A focused platform that increases visibility for Aruba’s tour operators—without adding complexity to your day-to-day.",
+      "A focused platform that increases visibility for Prague’s tour operators—without adding complexity to your day-to-day.",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m10.5-18v18m-18-9h19.5M3.75 9h15M3.75 12h15m-12 4.5h15m-12 4.5h15" />

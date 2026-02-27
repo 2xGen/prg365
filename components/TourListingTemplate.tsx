@@ -8,7 +8,7 @@ import type { ViatorProductSummary, ItineraryStep } from "@/lib/viator-api";
 export interface TourListingTemplateProps {
   /** Static listing content (SEO copy, best for, inclusions) */
   listing: TourListing;
-  /** Category page title (e.g. "Catamaran Cruises in Aruba") */
+  /** Category page title (e.g. "Catamaran Cruises in Prague") */
   categoryTitle: string;
   /** Category page URL (e.g. "/catamaran-cruises-in-aruba") */
   categoryHref: string;

@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
 
-const SITE_URL = "https://aru365.com";
+const SITE_URL = "https://prg365.com";
 const DEFAULT_OG_IMAGE =
   "https://soaacpusdhyxwucjhhpy.supabase.co/storage/v1/object/public/aru365/best%20tours%20in%20prague.png";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | Aru365",
+  title: "Terms and Conditions | Prg365",
   description:
-    "Terms and conditions for using Aru365. We are an affiliate platform; we do not process bookings or personal data. Bookings are made with Viator.",
+    "Terms and conditions for using Prg365. We are an affiliate platform; we do not process bookings or personal data. Bookings are made with Viator.",
   openGraph: {
     url: `${SITE_URL}/terms`,
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: "Prg365 – Tours and experiences in Prague" }],
@@ -33,10 +33,10 @@ export default function TermsPage() {
 
             <div className="mt-10 prose prose-slate max-w-none">
               <section className="mb-8">
-                <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">1. About Aru365</h2>
+                <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">1. About Prg365</h2>
                 <p className="text-slate-600 leading-relaxed">
-                  Aru365 is an informational and affiliate website that helps visitors discover and compare tours and
-                  excursions in Aruba. We are owned and operated by 2xGen LLC. We do not offer user accounts or sign-up
+                  Prg365 is an informational and affiliate website that helps visitors discover and compare tours and
+                  excursions in Prague. We are owned and operated by 2xGen LLC. We do not offer user accounts or sign-up
                   functionality. We do not collect or process your personal information for account purposes.
                 </p>
               </section>
@@ -44,7 +44,7 @@ export default function TermsPage() {
               <section className="mb-8">
                 <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">2. We do not handle bookings</h2>
                 <p className="text-slate-600 leading-relaxed">
-                  All tours and experiences shown on Aru365 are offered by third-party operators. When you choose to
+                  All tours and experiences shown on Prg365 are offered by third-party operators. When you choose to
                   book, you are redirected to our affiliate partner Viator (or the relevant operator’s booking channel).
                   We do not process, store, or handle any bookings ourselves. Any booking you make is subject to the
                   terms and policies of the booking provider (e.g. Viator and the tour operator).
@@ -54,7 +54,7 @@ export default function TermsPage() {
               <section className="mb-8">
                 <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">3. Affiliate relationship</h2>
                 <p className="text-slate-600 leading-relaxed">
-                  We are an official Viator affiliate partner. The tours displayed on Aru365 are sourced from Viator’s
+                  We are an official Viator affiliate partner. The tours displayed on Prg365 are sourced from Viator’s
                   catalogue. We may earn a commission when you book through links on our site, at no extra cost to you.
                   This does not affect how we present or recommend tours. Our affiliate status does not make us the
                   seller or provider of any tour; the contract for the experience is between you and the operator or
@@ -77,8 +77,8 @@ export default function TermsPage() {
               <section className="mb-8">
                 <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">5. Use of the website</h2>
                 <p className="text-slate-600 leading-relaxed">
-                  You may use Aru365 for personal, non-commercial purposes to browse and find information about tours in
-                  Aruba. You may not scrape, copy, or misuse our content or systems. We strive to keep information
+                  You may use Prg365 for personal, non-commercial purposes to browse and find information about tours in
+                  Prague. You may not scrape, copy, or misuse our content or systems. We strive to keep information
                   accurate but do not guarantee that all content is error-free or up to date at all times.
                 </p>
               </section>
@@ -86,7 +86,7 @@ export default function TermsPage() {
               <section className="mb-8">
                 <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">6. Contact</h2>
                 <p className="text-slate-600 leading-relaxed">
-                  For questions about these terms or about Aru365, you can contact us at{" "}
+                  For questions about these terms or about Prg365, you can contact us at{" "}
                   <a href="mailto:matthijs@2xgen.com" className="text-prg-blue hover:underline">
                     matthijs@2xgen.com
                   </a>

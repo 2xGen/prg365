@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
 
-const SITE_URL = "https://aru365.com";
+const SITE_URL = "https://prg365.com";
 const DEFAULT_OG_IMAGE =
   "https://soaacpusdhyxwucjhhpy.supabase.co/storage/v1/object/public/aru365/best%20tours%20in%20prague.png";
 
 export const metadata: Metadata = {
-  title: "Partner with us | Feature your Aruba tours on Aru365",
+  title: "Partner with us | Feature your Prague tours on Prg365",
   description:
-    "Get your Aruba tours or experiences featured on Aru365. Contact us by email or WhatsApp to partner with us.",
+    "Get your Prague tours or experiences featured on Prg365. Contact us by email or WhatsApp to partner with us.",
   openGraph: {
     url: `${SITE_URL}/partner`,
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: "Prg365 – Tours and experiences in Prague" }],
@@ -30,7 +30,7 @@ export default function PartnerPage() {
               Partner with us
             </h1>
             <p className="mt-4 text-lg text-slate-600 leading-relaxed">
-              Have an Aruba tour or experience you’d like featured on Aru365? We’d love to hear from you.
+              Have a Prague tour or experience you’d like featured on Prg365? We’d love to hear from you.
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
@@ -62,7 +62,7 @@ export default function PartnerPage() {
             </div>
 
             <p className="mt-8 text-slate-500 text-sm">
-              Reach out for featuring your Aruba tours or experiences on Aru365. We’ll get back to you as soon as we can.
+              Reach out for featuring your Prague tours or experiences on Prg365. We’ll get back to you as soon as we can.
             </p>
 
             <p className="mt-6">

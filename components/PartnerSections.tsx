@@ -57,7 +57,7 @@ export function PartnerSections() {
               Restaurants & <span className="text-prg-red">Dining</span> <span className="text-slate-500 font-normal text-sm">(Launching Soon)</span>
             </h3>
             <p className="text-slate-600 text-sm leading-relaxed mb-4">
-              Restaurant partnerships will open in Phase 2 of Prg365. We’re currently prioritizing tours and excursions to build Aruba’s leading experience platform.
+              Restaurant partnerships will open in Phase 2 of Prg365. We’re currently prioritizing tours and excursions to build Prague’s leading experience platform.
             </p>
             <p className="text-slate-600 text-sm mb-6">
               Interested in early access for restaurant partnerships? Reach out below.
