@@ -189,14 +189,33 @@ function mapBulkItemToSummary(item: ViatorBulkItem): ViatorProductSummary | null
       .filter((n): n is number => typeof n === "number");
     if (prices.length > 0) priceFrom = Math.min(...prices);
   }
+  /** Target US visitors: display in USD. Convert EUR/CZK to USD when API returns local currency. */
+  const EUR_TO_USD = 1.08;
+  const CZK_TO_USD = 0.043;
   const currency = (pricing.currency as string) ?? "USD";
-  const currencySymbol = currency === "USD" ? "$" : `${currency} `;
+  let displayPrice: number | undefined = typeof priceFrom === "number" ? priceFrom : undefined;
+  if (typeof priceFrom === "number" && currency === "EUR") {
+    displayPrice = Math.round(priceFrom * EUR_TO_USD);
+  } else if (typeof priceFrom === "number" && currency === "CZK") {
+    displayPrice = Math.round(priceFrom * CZK_TO_USD);
+  } else if (typeof priceFrom === "number") {
+    displayPrice = Math.round(priceFrom);
+  }
   let fromPriceDisplay: string;
-  if (typeof priceFrom === "number") {
-    fromPriceDisplay = `Price from ${currencySymbol}${Math.round(priceFrom)}`;
+  if (typeof displayPrice === "number") {
+    fromPriceDisplay = `Price from $${displayPrice}`;
   } else if (typeof pricing.summary === "string" && pricing.summary.trim()) {
     const s = pricing.summary.trim();
-    fromPriceDisplay = /^(from\s+)?\$?\d+/i.test(s) ? `Price from ${s.replace(/^from\s+/i, "").trim()}` : s;
+    const eurMatch = s.match(/EUR\s*([\d.,]+)/i);
+    if (eurMatch) {
+      const num = parseFloat(eurMatch[1].replace(/,/g, ""));
+      if (!Number.isNaN(num))
+        fromPriceDisplay = `Price from $${Math.round(num * EUR_TO_USD)}`;
+      else
+        fromPriceDisplay = /^(from\s+)?\$?\d+/i.test(s) ? `Price from ${s.replace(/^from\s+/i, "").trim()}` : s;
+    } else {
+      fromPriceDisplay = /^(from\s+)?\$?\d+/i.test(s) ? `Price from ${s.replace(/^from\s+/i, "").trim()}` : s;
+    }
   } else {
     fromPriceDisplay = "Price from (see options)";
   }
@@ -217,7 +236,7 @@ function mapBulkItemToSummary(item: ViatorBulkItem): ViatorProductSummary | null
     title: item.title ?? "Tour",
     productUrl: item.productUrl,
     fromPriceDisplay,
-    ...(typeof priceFrom === "number" && { fromPrice: priceFrom }),
+    ...(typeof displayPrice === "number" && { fromPrice: displayPrice }),
     reviewCount: totalReviews,
     rating: averageRating,
     imageUrl: firstImage ?? null,
@@ -259,7 +278,7 @@ async function fetchPricesFromSchedules(
       "Accept-Language": "en-US",
       "exp-api-key": apiKey,
     },
-    body: JSON.stringify({ productCodes }),
+    body: JSON.stringify({ productCodes, currencyCode: "USD" }),
     next: { revalidate: 3600 },
   });
 
@@ -381,7 +400,7 @@ export async function fetchProductsBulk(
       "Accept-Language": "en-US",
       "exp-api-key": apiKey,
     },
-    body: JSON.stringify({ productCodes }),
+    body: JSON.stringify({ productCodes, currencyCode: "USD" }),
     next: { revalidate: 3600 },
   });
 
@@ -401,7 +420,7 @@ export async function fetchProductsBulk(
     const fromPrice = priceMap.get(summary.productCode);
     if (typeof fromPrice === "number") {
       summary.fromPriceDisplay = `Price from $${Math.round(fromPrice)}`;
-      summary.fromPrice = fromPrice;
+      summary.fromPrice = Math.round(fromPrice);
     }
   }
 

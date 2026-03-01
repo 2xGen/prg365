@@ -39,6 +39,7 @@ export function getViatorProductBookUrl(productCode: string): string {
     pid: VIATOR_PID,
     medium: "api",
     api_version: "2.0",
+    campaign: "prg",
   });
   return `https://www.viator.com/Prague/d462-ttd/p-${productCode}?${params.toString()}`;
 }

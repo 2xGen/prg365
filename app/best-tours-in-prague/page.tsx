@@ -178,6 +178,17 @@ export default async function BestToursPage() {
                   );
                 })}
               </div>
+              <div className="mt-8 flex justify-center">
+                <Link
+                  href="/tours-excursions"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-base font-semibold text-white bg-prg-red hover:bg-prg-red-dark transition-colors shadow-md"
+                >
+                  View all tours
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
             </section>
           )}
 
@@ -215,6 +226,18 @@ export default async function BestToursPage() {
               ))}
             </div>
           </section>
+
+          <div className="mt-12 flex justify-center">
+            <Link
+              href="/tours-excursions"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-base font-semibold text-white bg-prg-red hover:bg-prg-red-dark transition-colors shadow-md"
+            >
+              View all tours
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </main>
       <Footer />

@@ -28,6 +28,16 @@ export function Footer() {
               <span className="text-slate-400 text-sm sm:text-base mt-3 block">
                 Everything Prague. <span className="text-prg-blue/90 font-medium">365 Days a Year.</span>
               </span>
+              <p className="text-slate-500 text-xs mt-2">
+                More destinations:{" "}
+                <a href="https://lon365.com" target="_blank" rel="noopener noreferrer" className="text-prg-blue hover:underline">London</a>
+                {" · "}
+                <a href="https://tyo365.com" target="_blank" rel="noopener noreferrer" className="text-prg-blue hover:underline">Tokyo</a>
+                {" · "}
+                <a href="https://aru365.com" target="_blank" rel="noopener noreferrer" className="text-prg-blue hover:underline">Aruba</a>
+                {" · "}
+                <a href="https://cur365.com" target="_blank" rel="noopener noreferrer" className="text-prg-blue hover:underline">Curaçao</a>
+              </p>
             </div>
 
             {/* Categories */}

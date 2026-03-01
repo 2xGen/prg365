@@ -52,6 +52,8 @@ const allCodes = [...new Set([...codeMatches].map((m) => m[1]))].filter(
 console.log("Product codes to fetch:", allCodes.length);
 
 const BATCH = 50;
+const EUR_TO_USD = 1.08;
+const CZK_TO_USD = 0.043;
 const out = {};
 
 function getFirstImageUrl(images) {
@@ -86,7 +88,7 @@ for (let i = 0; i < allCodes.length; i += BATCH) {
       "Accept-Language": "en-US",
       "exp-api-key": apiKey,
     },
-    body: JSON.stringify({ productCodes: batch }),
+    body: JSON.stringify({ productCodes: batch, currencyCode: "USD" }),
   });
   if (!res.ok) {
     console.error("Bulk API error:", res.status, await res.text());
@@ -100,11 +102,20 @@ for (let i = 0; i < allCodes.length; i += BATCH) {
   for (const item of data) {
     if (item.status !== "ACTIVE" || !item.productCode || !item.productUrl) continue;
     const pricing = item.pricingInfo ?? {};
-    // Use Viator's product-level "from price": prefer summary (e.g. "From $31.00"), then priceFrom/fromPrice (not schedule min)
+    // Use Viator's product-level "from price". Target US visitors: output USD (request currencyCode or convert EUR/CZK).
     let fromPriceDisplay;
     if (typeof pricing.summary === "string" && pricing.summary.trim()) {
-      fromPriceDisplay = pricing.summary.trim();
-      if (!/^(from\s+)?\$?\d+/i.test(fromPriceDisplay)) fromPriceDisplay = `Price from ${fromPriceDisplay}`;
+      const s = pricing.summary.trim();
+      const eurMatch = s.match(/EUR\s*([\d.,]+)/i);
+      if (eurMatch) {
+        const num = parseFloat(eurMatch[1].replace(/,/g, ""));
+        if (!Number.isNaN(num)) fromPriceDisplay = `Price from $${Math.round(num * EUR_TO_USD)}`;
+        else fromPriceDisplay = `Price from ${s}`;
+      } else if (/^(from\s+)?\$?\d+/i.test(s)) {
+        fromPriceDisplay = /^\$/.test(s) ? (s.replace(/^from\s+/i, "").trim()) : `Price from ${s.replace(/^from\s+/i, "").trim()}`;
+      } else {
+        fromPriceDisplay = `Price from ${s}`;
+      }
     } else {
       let priceFrom =
         typeof pricing.priceFrom === "number"
@@ -119,9 +130,12 @@ for (let i = 0; i < allCodes.length; i += BATCH) {
         if (prices.length > 0) priceFrom = Math.min(...prices);
       }
       const currency = pricing.currency ?? "USD";
-      const sym = currency === "USD" ? "$" : `${currency} `;
       if (typeof priceFrom === "number") {
-        fromPriceDisplay = `Price from ${sym}${Math.round(priceFrom)}`;
+        let usdAmount = priceFrom;
+        if (currency === "EUR") usdAmount = Math.round(priceFrom * EUR_TO_USD);
+        else if (currency === "CZK") usdAmount = Math.round(priceFrom * CZK_TO_USD);
+        else usdAmount = Math.round(priceFrom);
+        fromPriceDisplay = `Price from $${usdAmount}`;
       } else {
         fromPriceDisplay = "Price from (see options)";
       }
@@ -163,7 +177,7 @@ const schedRes = await fetch(schedUrl, {
     "Accept-Language": "en-US",
     "exp-api-key": apiKey,
   },
-  body: JSON.stringify({ productCodes: allCodes }),
+  body: JSON.stringify({ productCodes: allCodes, currencyCode: "USD" }),
 });
 if (schedRes.ok) {
   const schedData = await schedRes.json();
@@ -178,8 +192,10 @@ if (schedRes.ok) {
     const fromPrice = schedule.summary?.fromPrice;
     if (typeof fromPrice === "number" && fromPrice > 0) {
       const currency = schedule.currency ?? "USD";
-      const sym = currency === "USD" ? "$" : `${currency} `;
-      out[code].fromPriceDisplay = `Price from ${sym}${Math.round(fromPrice)}`;
+      let usdAmount = Math.round(fromPrice);
+      if (currency === "EUR") usdAmount = Math.round(fromPrice * EUR_TO_USD);
+      else if (currency === "CZK") usdAmount = Math.round(fromPrice * CZK_TO_USD);
+      out[code].fromPriceDisplay = `Price from $${usdAmount}`;
     }
   }
   console.log("Applied schedule summary.fromPrice for", list.length, "products");

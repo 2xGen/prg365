@@ -27,6 +27,24 @@ export function getViatorProductUrl(productCode: string): string {
   return getViatorProductBookUrl(productCode);
 }
 
+/** Target US visitors: normalize EUR/CZK to USD display. Approximate rates. */
+const EUR_TO_USD = 1.08;
+const CZK_TO_USD = 0.043;
+
+function toUsdDisplay(fromPriceDisplay: string): string {
+  const eurMatch = fromPriceDisplay.match(/Price from EUR\s*([\d.,]+)/i);
+  if (eurMatch) {
+    const num = parseFloat(eurMatch[1].replace(/,/g, ""));
+    if (!Number.isNaN(num)) return `Price from $${Math.round(num * EUR_TO_USD)}`;
+  }
+  const czkMatch = fromPriceDisplay.match(/Price from CZK\s*([\d.,]+)/i);
+  if (czkMatch) {
+    const num = parseFloat(czkMatch[1].replace(/,/g, ""));
+    if (!Number.isNaN(num)) return `Price from $${Math.round(num * CZK_TO_USD)}`;
+  }
+  return fromPriceDisplay;
+}
+
 /** Static card data per product code (fallback when no generated snapshot). */
 const staticByCode: Record<
   string,
@@ -401,7 +419,7 @@ export function getStaticProductSummaries(
       productCode: code,
       title,
       productUrl,
-      fromPriceDisplay: data.fromPriceDisplay,
+      fromPriceDisplay: toUsdDisplay(data.fromPriceDisplay),
       reviewCount: data.reviewCount,
       rating: data.rating,
       imageUrl: data.imageUrl ?? null,
