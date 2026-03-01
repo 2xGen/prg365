@@ -61,7 +61,7 @@ export function Header() {
         href="/best-tours-in-prague"
         className={`text-sm font-medium transition-colors ${isBestTours ? "text-prg-red" : "text-slate-600 hover:text-slate-900"}`}
       >
-        By category
+        Top picks
       </Link>
       <Link
         href="/tours-excursions"
@@ -188,7 +188,7 @@ export function Header() {
               onClick={() => setMobileMenuOpen(false)}
               className={`px-4 py-3 rounded-lg text-sm font-medium ${isBestTours ? "text-prg-red bg-slate-100" : "text-slate-700 hover:bg-slate-100"}`}
             >
-              By category
+              Top picks
             </Link>
             <Link
               href="/tours-excursions"
